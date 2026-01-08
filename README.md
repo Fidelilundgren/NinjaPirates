@@ -36,10 +36,10 @@ All text får vara lorem ipsum.
 * Ni skall planera ert arbete i en s.k. *kanban-board* på GitHub Projects.
 * Skapa minst 15 st User Stories baserat på ovanstående kravlistor, samt designen.
 * Applicera *Agil estimering* på era User Stories för att fastställa vilka som är mest "prisvärda".
-* Skapa en *Definition of Done* för var och en av era User Stories.
+* Skapa en *Acceptanskriterier* för var och en av era User Stories.
 * Bryt sönder era User Stories i olika tasks. (Det är dessa som ni kommer dra mellan kolumnerna i er *kanban-board*)
 * Varje Sprint inleds med ett *Sprint Planning*-möte, och avslutas med en *Sprint Retrospective*.
-* På *Sprint Planning* så bestämmer ni vad som är er **MVP** för veckan, och arbetar mot den.
+* På *Sprint Planning* så bestämmer ni vad som är er **MVP** och **Definition of Done** för veckan.
 * Daily Standups på 15 minuter varje dag ni arbetar.
 * På fredagens *Sprint Review* skall ni kunna visa upp vad ni byggt under veckan, samt föra en diskussion kring hur olika delar av arbetet flyter på och motivera varför jag som uppdragsgivare skall fortsätta slänga pengar på projektet.
 * På **ALLA** projekt-möten ni har med oss lärare och varandra inom gruppen skall kamera vara **påslagen**.
@@ -58,12 +58,10 @@ Roten till misslyckade projekt stavas i 9 fall av 10 *dålig kommunikation*. Var
 
 ### 🌟 Väl Godkänt
 
-* Er HTML och CSS är väldokumenterad
+* Er HTML och CSS är väldokumenterad.
 * Ni har fyllt er sida med passande animationer och transitions.
 * Ni använder gemensam CSS till återkommande komponenter. (ex. header, footer, knappar mm.)
 * VG-reflektionerna är ifyllda.
-
-## 💡 Tips & Rekommendationer
 
 ## 📚 Resurser
 
@@ -74,9 +72,9 @@ Roten till misslyckade projekt stavas i 9 fall av 10 *dålig kommunikation*. Var
 
 Ert GitHub-repo skall innehålla följande:
 
-* Er kod
-* Era grupp- och individuella reflektioner.
+* Er kod.
+* Era grupp- och individuella reflektioner. (lägg detta i en egen mapp)
 
 ## ⏰ Deadline
 
-Länk till ert Github-repo laddas upp i Classroom senast kl 16:00 den 29/1.
+Länk till ert Github-repo laddas upp i Classroom senast kl 16:00 den 29/1. Tänk på att var och en i gruppen måste ladda upp även om ni har ett gemensamt Git-repo.
