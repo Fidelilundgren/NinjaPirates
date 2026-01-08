@@ -20,6 +20,7 @@ All text får vara lorem ipsum.
 
 ## 🛠️ Tekniska krav
 
+* Innehållet på sidan har en maxbredd på 1240px.
 * Sidan skall vara responsiv d.v.s den ska funka både i desktop och mobilt läge (stylingen behöver inte vara optimal på mellanstorlekarna, MEN jag vill inte att några element hamnar utanför skärm/containers när jag krymper skärmen). Jag kommer främst titta på sidan mellan 375px-576px, samt större än 1000px. Sidan får aldrig "gå sönder".
 * Du måste använda både CSS Grid och flexbox.
 * Sidan måste vara semantiskt korrekt. Dvs. minimalt användande av DIV-element.
@@ -28,6 +29,7 @@ All text får vara lorem ipsum.
 * Ni får **INTE** använda någon JavaScript när ni bygger.
 * Formulär skall vara statiska och inte fungera, samt sökresultaten på **Booking Page** skall synas från start.
 * Korrekt länkning mellan sidor
+* Vid varje *Sprint Review* skall ert senaste inkrement vara publicerat på Github Pages.
 
 ## 🔁 Agila krav
 
@@ -40,23 +42,39 @@ All text får vara lorem ipsum.
 * På *Sprint Planning* så bestämmer ni vad som är er **MVP** för veckan, och arbetar mot den.
 * Daily Standups på 15 minuter varje dag ni arbetar.
 * På fredagens *Sprint Review* skall ni kunna visa upp vad ni byggt under veckan, samt föra en diskussion kring hur olika delar av arbetet flyter på och motivera varför jag som uppdragsgivare skall fortsätta slänga pengar på projektet.
+* På **ALLA** projekt-möten ni har med oss lärare och varandra inom gruppen skall kamera vara **påslagen**.
 
 ## 🤝 Samarbete & Kommunikation
 
 Roten till misslyckade projekt stavas i 9 fall av 10 *dålig kommunikation*. Varje gång någonting går snett, någon gör något fel, ni får en Git-konflikt eller en grupp-konflikt: **Kommunicera med varandra**.
 
-## 📦 Leverans & Inlämning
-
-## 🧾 Dokumentation
 
 ## 🏆 Betygskriterier
 
 ### ✅ Godkänt
 
+* Alla funktionella, tekniska och agila krav ovan uppfylls.
+* Alla reflektioner är ifyllda.
+
 ### 🌟 Väl Godkänt
+
+* Er HTML och CSS är väldokumenterad
+* Ni har fyllt er sida med passande animationer och transitions.
+* Ni använder gemensam CSS till återkommande komponenter. (ex. header, footer, knappar mm.)
+* VG-reflektionerna är ifyllda.
 
 ## 💡 Tips & Rekommendationer
 
 ## 📚 Resurser
 
+## 📦 Leverans & Inlämning
+
+Ert GitHub-repo skall innehålla följande:
+
+* Er kod
+* Era mötesanteckningar (lägg i separat mapp *anteckningar*)
+* Era grupp- och individuella reflektioner.
+
 ## ⏰ Deadline
+
+Länk till ert Github-repo laddas upp i Classroom senast kl 16:00 den 29/1.
