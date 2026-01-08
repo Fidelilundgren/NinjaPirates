@@ -66,6 +66,7 @@ Roten till misslyckade projekt stavas i 9 fall av 10 *dålig kommunikation*. Var
 ## 📚 Resurser
 
 * [Grupper](https://drive.google.com/file/d/1ypR3XjnBCBzKYSJR4sQYVZRSwyRRlO1W/view?usp=sharing)
+* [Figmaskiss](https://www.figma.com/design/GNkFDXZzPTLpbkcut4iqzR/Bonz.ai-BUV25?node-id=12-1019&t=GibHUdt4vQnY0fCH-1)
 * [Bokningsschema Sprint Review]() (kommer)
 
 ## 📦 Leverans & Inlämning
