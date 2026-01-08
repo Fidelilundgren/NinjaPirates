@@ -54,7 +54,7 @@ Roten till misslyckade projekt stavas i 9 fall av 10 *dålig kommunikation*. Var
 ### ✅ Godkänt
 
 * Alla funktionella, tekniska och agila krav ovan uppfylls.
-* Alla reflektioner är ifyllda.
+* G-reflektionerna är ifyllda.
 
 ### 🌟 Väl Godkänt
 
