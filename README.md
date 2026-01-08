@@ -67,12 +67,14 @@ Roten till misslyckade projekt stavas i 9 fall av 10 *dålig kommunikation*. Var
 
 ## 📚 Resurser
 
+* [Grupper](https://drive.google.com/file/d/1ypR3XjnBCBzKYSJR4sQYVZRSwyRRlO1W/view?usp=sharing)
+* [Bokningsschema Sprint Review]() (kommer)
+
 ## 📦 Leverans & Inlämning
 
 Ert GitHub-repo skall innehålla följande:
 
 * Er kod
-* Era mötesanteckningar (lägg i separat mapp *anteckningar*)
 * Era grupp- och individuella reflektioner.
 
 ## ⏰ Deadline
