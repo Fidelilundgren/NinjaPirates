@@ -34,12 +34,12 @@ All text får vara lorem ipsum.
 ## 🔁 Agila krav
 
 * Ni skall planera ert arbete i en s.k. *kanban-board* på GitHub Projects.
-* Skapa minst 15 st User Stories baserat på ovanstående kravlistor, samt designen.
+* Skapa ca 10-15 st User Stories baserat på ovanstående kravlistor, samt designen.
 * Applicera *Agil estimering* på era User Stories för att fastställa vilka som är mest "prisvärda".
 * Skapa en *Acceptanskriterier* för var och en av era User Stories.
 * Bryt sönder era User Stories i olika tasks. (Det är dessa som ni kommer dra mellan kolumnerna i er *kanban-board*)
 * Varje Sprint inleds med ett *Sprint Planning*-möte, och avslutas med en *Sprint Retrospective*.
-* På *Sprint Planning* så bestämmer ni vad som är er **MVP** och **Definition of Done** för veckan.
+* På *Sprint Planning* så bestämmer ni vad som är er **MVP** för veckan, samt vilka tasks ni skall flytta till er *Sprint Backlog*.
 * Daily Standups på 15 minuter varje dag ni arbetar.
 * På fredagens *Sprint Review* skall ni kunna visa upp vad ni byggt under veckan, samt föra en diskussion kring hur olika delar av arbetet flyter på och motivera varför jag som uppdragsgivare skall fortsätta slänga pengar på projektet.
 * På **ALLA** projekt-möten ni har med oss lärare och varandra inom gruppen skall kamera vara **påslagen**.
@@ -47,7 +47,6 @@ All text får vara lorem ipsum.
 ## 🤝 Samarbete & Kommunikation
 
 Roten till misslyckade projekt stavas i 9 fall av 10 *dålig kommunikation*. Varje gång någonting går snett, någon gör något fel, ni får en Git-konflikt eller en grupp-konflikt: **Kommunicera med varandra**.
-
 
 ## 🏆 Betygskriterier
 
@@ -67,6 +66,8 @@ Roten till misslyckade projekt stavas i 9 fall av 10 *dålig kommunikation*. Var
 
 * [Grupper](https://drive.google.com/file/d/1ypR3XjnBCBzKYSJR4sQYVZRSwyRRlO1W/view?usp=sharing)
 * [Figmaskiss](https://www.figma.com/design/GNkFDXZzPTLpbkcut4iqzR/Bonz.ai-BUV25?node-id=12-1019&t=GibHUdt4vQnY0fCH-1)
+* [Bilder och logotyper](./assets/assets)
+* [Reflektionsmallar](./reflections)
 * [Bokningsschema Sprint Review]() (kommer)
 
 ## 📦 Leverans & Inlämning
