@@ -1,0 +1,55 @@
+/* =======================
+   GLOBAL DESIGN
+   ======================= */
+
+:root { /*li = light, dk = dark, cu = contact us*/
+
+    /* Colors */
+    --green: #009966;
+    --gblue: #009688;
+    --liblue: #D4FFF3;
+    --dkblue: #101828;
+    --white: #FFFFFF;
+    --black: #000000;
+    --grey: #686868;
+    --ligrey: #ECECF0;
+    --purple: #9810FA;
+    --cugrey: #F9FAFB;
+
+    --font-base: "Inter";
+    --text-body: 20px;
+    --text-button: 24px;
+    --text-h1: 80px;
+    --text-h2: 48px;
+    --text-h3: 32px;
+    --text-f: 16px; /*f = footer*/
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-base);
+    font-size: var(--text-body);
+}
+
+h1 { font-size: var(--text-h1); }
+
+h2 { font-size: var(--text-h2); }
+
+h3 { font-size: var(--text-h3); }
+
+button { 
+    font-family: var(--font-base); 
+    font-size: var(--text-button); 
+}
+
+footer { font-size: var(--text-f);}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
