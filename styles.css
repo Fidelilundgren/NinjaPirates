@@ -18,7 +18,7 @@
 
     --font-base: "Inter";
     --text-body: 20px;
-    --text-button: 24px;
+    --text-form: 24px;
     --text-h1: 80px;
     --text-h2: 48px;
     --text-h3: 32px;
@@ -41,9 +41,9 @@ h2 { font-size: var(--text-h2); }
 
 h3 { font-size: var(--text-h3); }
 
-button { 
+button, form { 
     font-family: var(--font-base); 
-    font-size: var(--text-button); 
+    font-size: var(--text-form); 
 }
 
 footer { font-size: var(--text-f);}
