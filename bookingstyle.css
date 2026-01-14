@@ -1,0 +1,25 @@
+
+/* ===== Booking page ===== */
+
+.booking-hero {
+  background: #c7f5ea;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.booking-search form {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.booking-results {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.room-card {
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
