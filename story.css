@@ -1,0 +1,123 @@
+/* @import url('styles.css'); */
+
+:root {
+    --bg-dark: #101828;
+    --text-light: #f4f4f4;
+    --accent-color: #00c7a5; 
+    --text-faded: #a0a0a0;
+}
+
+
+footer {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    padding: 60px 80px 30px;
+    font-family: Arial, sans-serif;
+}
+
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 100px; 
+}
+
+
+.brand-info {
+    max-width: 350px;
+}
+
+/* .logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+} */
+
+
+.logo-image {
+    width: 100px; 
+    height: 100px; 
+    /* border-radius: 50%;  */
+    /* margin-bottom: 10px; 
+    object-fit: cover;
+    max-width: 100%; */
+    aspect-ratio: 1 / 1;
+
+}
+
+.company-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+.tagline {
+    color: var(--accent-color);
+    font-size: 10px;
+    margin-top: 4px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.description {
+    font-size: 12px;
+    color: var(--text-faded);
+    margin-top: 30px;
+    line-height: 1.6;
+}
+
+/* --- Contact --- */
+h4 {
+    color: var(--text-light);
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.contact-section p, .links-section li {
+    font-size: 12px;
+    color: var(--text-faded);
+    margin: 10px 0;
+    line-height: 1.4;
+}
+
+.links-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.links-section a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer-bottom hr {
+    border: none;
+    border-top: 1px solid var(--text-faded);
+    margin-bottom: 20px;
+}
+
+.footer-bottom p {
+    font-size: 12px;
+    color: var(--text-faded);
+}
+
+
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr; 
+        gap: 40px;
+        padding: 40px 5%;
+    }
+
+    footer {
+        padding: 40px 5% 30px;
+    }
+}
