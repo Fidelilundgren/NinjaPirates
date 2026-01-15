@@ -49,7 +49,7 @@ button, form {
 footer { font-size: var(--text-f);}
 
 .wrapper {
-    max-width: 1200px;
+    max-width: 1240px;
     margin: 0 auto;
 }
 

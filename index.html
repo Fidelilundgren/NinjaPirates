@@ -11,9 +11,27 @@
     <section class="bookingSearch">
         <div class="wrapper">
             <form class="bookingForm">
-                <label for="checkIn">Check In</label>
-                <input type="date" id="checkIn" name="checkIn" disabled aria-disabled="true">
 
+                <article class="formItemFlex">
+                <label class="defaultFont" for="checkIn">Check In</label>
+                <input class="defaultFont" type="date" id="checkIn" name="checkIn">
+                </article>
+
+                <article class="formItemFlex">
+                <label class="defaultFont" for="checkOut">Check Out</label>
+                <input class="defaultFont" type="date" id="checkOut" name="checkOut">
+                </article>
+
+                <article class="formItemFlex">
+                <select class="defaultFont">
+                    <option value="">Guests</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select> </article>
+
+                <button class="defaultFont" type="submit">Check Availability</button>
             </form>
         </div>
     </section>
