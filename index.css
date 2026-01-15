@@ -1,4 +1,74 @@
+/*=========================================
+Check in/check out on landing page
+===========================================*/
+
+/*Background with ombre*/
 .bookingSearch {
-    padding: 40px 0;
     background: linear-gradient(to left, var(--green), var(--gblue));
+    padding: 40px 0 40px 0;
 } 
+
+.bookingForm {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+}
+/*All fonts having the same design*/
+.defaultFont {
+    font-size: var(--textForm);
+    font-family: var(--fontBase);
+    font-weight: 600;
+}
+
+.formItemFlex {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--grey);
+    border-radius: 15px;
+    background: var(--white);
+    padding: 16px 12px 16px 12px;
+    width: 230px;
+}
+
+.bookingForm label{
+    justify-content: center;
+    text-align: center;
+}
+
+select {
+    background-color: transparent;
+    border: 0;
+    justify-content: center;
+    text-align: center;
+}
+
+.bookingForm input {
+    background-color: transparent;
+    border: 1px;
+}
+
+button {
+    padding: 16px 12px 16px 12px;
+    width: 230px;
+    border: 1px;
+    background: var(--black);
+    color: var(--white);
+    justify-content: center;
+    text-align: center;
+    border-radius: 15px;
+}
+/*For screens less than 990px I want to have to elements/row instead of 3/4*/
+@media (max-width: 990px)  {
+    .bookingForm{
+    display: grid;
+    grid-template-columns: repeat(2, 230px);
+    column-gap: 22px;
+    place-items: center;
+}
+}
+/*=========================================
+End Check in/check out on landing page
+===========================================*/
