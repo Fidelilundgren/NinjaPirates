@@ -6,14 +6,14 @@
   <title>Bonz.ai Booking</title>
 
   <!-- Global styles -->
-  <link rel="stylesheet" href="reflections\style.css">
+  <link rel="stylesheet" href="styles.css">
   <!-- Booking-specific styles -->
-  <link rel="stylesheet" href="bookingStyle.css">
+  <link rel="stylesheet" href="bookingstyles.css">
 </head>
 
 <body>
   <header>
-   
+   <!-- Kommer senare -->
   </header>
 
   <main>
@@ -21,6 +21,7 @@
       <h1>Book Your Stay</h1>
       <p>Discover sustainable luxury powered by AI</p>
     </section>
+    
 
     <section class="booking-search container">
       <form>
@@ -31,24 +32,53 @@
 
         <label>
           Check-out
-          <input type="date">
+          <input type="date"> <!-- Typen som gör att detta blir datum -->
         </label>
 
-        <button type="button">Search</button>
-      </form>
-    </section>
+        <!-- Guests -->
+    <div class="field">
+      <label class="field-label" for="guests">Guests</label>
+      <div class="control">
+        <select id="guests" name="guests" class="select">
+          <option value="1">1 Guest</option>
+          <option value="2" selected>2 Guests</option> <!-- Satte värde 2 för att det är det som är på bilden -->
+          <option value="3">3 Guests</option>
+          <option value="4">4 Guests</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Room Type -->
+    <div class="field">
+      <label class="field-label" for="roomType">Room Type</label>
+      <div class="control">
+        <select id="roomType" name="roomType" class="select">
+          <option value="all" selected>All Rooms</option>
+          <option value="standard">Standard</option>
+          <option value="deluxe">Deluxe</option>
+          <option value="suite">Suite</option>
+        </select>
+      </div>
+    </div>
+
+        <!-- Button -->
+    <div class="field field--button">
+      <button class="btn-book" type="submit">Book now</button>
+    </div>
+  </form>
+</section>
 
     <section class="booking-results container">
       <article class="room-card">
-        <h2>GreenTech Deluxe</h2>
-        <p>$199 / night</p>
+        <h2>EcoSmart Suite</h2>
+        <p>$299 / night</p>
         <button type="button">Reserve</button>
       </article>
     </section>
   </main>
 
   <footer>
-    
+       <!-- Kommer senare -->
   </footer>
 </body>
 </html>
