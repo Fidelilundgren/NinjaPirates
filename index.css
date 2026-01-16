@@ -1,82 +1,3 @@
-/* ===== Header och Navigationsmenyn ===== Denna ska vara samma för alla sidor*/
-
-.site-header {
-    background: var(--white);
-    width: 100%;
-    height: 147px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-}
-
-.nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px 32px;
-    gap: 10px;
-}
-
-/* Logon i headen */
-.nav-logo {
-    display: flex;
-    align-items: center;
-    width: 322px;
-    height: 78px;
-    opacity: 1;
-}
-
-.nav-logo img {
-    height: 78px;
-    width: auto;
-    display: block;
-}
-
-/* Navigerings länkarna */
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 32px;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-}
-
-.nav-links a {
-    text-decoration: none;
-    font-family: var(--font-base);
-    font-weight: 600;
-    font-size: 24px;
-    color: var(--black);
-}
-
-/* hover effekt för navigeringsknapparna */
-.nav-links a:hover {
-    color: var(--green);
-}
-
-/* Visar vilken sida som är vald */
-.nav-links a.active {
-    color: var(--green);
-    font-weight: 700;
-}
-
-/* CTA-knapp (Call to action) */
-.nav-cta {
-    text-decoration: none;
-    font-family: var(--font-base);
-    font-weight: 600;
-    font-size: 24px;
-    color: var(--white);
-    background-color: var(--green);
-    padding: 16px 32px;
-    border-radius: 10px;
-    white-space: nowrap;
-}
-
-/* hover för CTA-knappen */
-.nav-cta:hover {
-    filter: brightness(1.05);
-}
-
 
 /*=========================================
 Check in/check out on landing page
@@ -96,6 +17,7 @@ Check in/check out on landing page
     align-items: center;
     gap: 22px;
 }
+
 /*All fonts having the same design*/
 .defaultFont {
     font-size: var(--textForm);
@@ -111,6 +33,7 @@ Check in/check out on landing page
     background: var(--white);
     padding: 16px 12px 16px 12px;
     width: 230px;
+    height: 90px;
 }
 
 .bookingForm label{
@@ -123,6 +46,7 @@ select {
     border: 0;
     justify-content: center;
     text-align: center;
+    padding-top: 15px;
 }
 
 .bookingForm input {
@@ -132,13 +56,18 @@ select {
 
 button {
     padding: 16px 12px 16px 12px;
-    width: 230px;
-    border: 1px;
+    border: 0;
     background: var(--black);
     color: var(--white);
     justify-content: center;
     text-align: center;
     border-radius: 15px;
+    width: 230px;
+    height: 90px;
+}
+
+.bookingForm button:hover {
+    background: var(--grey);
 }
 /*For screens less than 990px I want to have to elements/row instead of 3/4*/
 @media (max-width: 990px)  {
