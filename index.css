@@ -1,3 +1,4 @@
+
 /*=========================================
 Check in/check out on landing page
 ===========================================*/
@@ -16,6 +17,7 @@ Check in/check out on landing page
     align-items: center;
     gap: 22px;
 }
+
 /*All fonts having the same design*/
 .defaultFont {
     font-size: var(--textForm);
@@ -31,6 +33,7 @@ Check in/check out on landing page
     background: var(--white);
     padding: 16px 12px 16px 12px;
     width: 230px;
+    height: 90px;
 }
 
 .bookingForm label{
@@ -43,6 +46,7 @@ select {
     border: 0;
     justify-content: center;
     text-align: center;
+    padding-top: 15px;
 }
 
 .bookingForm input {
@@ -52,13 +56,18 @@ select {
 
 button {
     padding: 16px 12px 16px 12px;
-    width: 230px;
-    border: 1px;
+    border: 0;
     background: var(--black);
     color: var(--white);
     justify-content: center;
     text-align: center;
     border-radius: 15px;
+    width: 230px;
+    height: 90px;
+}
+
+.bookingForm button:hover {
+    background: var(--grey);
 }
 /*For screens less than 990px I want to have to elements/row instead of 3/4*/
 @media (max-width: 990px)  {
