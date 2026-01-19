@@ -1,5 +1,7 @@
-main {
+/* bookingstyles.css */
+.booking-page {
   background: var(--liblue);
+  min-height: 100vh;  
 }
 
 /* ===== Header och Navigationsmenyn ===== Denna ska vara samma för alla sidor*/
@@ -9,17 +11,20 @@ main {
   width: 100%;
   height: 147px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  position: relative;
 }
+
 .nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 32px;
-  gap: 10px;
+  position: relative;
+  height: 100%;
 }
 
 /* Logon i headen */
 .nav-logo {
+  position: absolute;
+  left: 100px;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   align-items: center;
   width: 322px;
@@ -36,19 +41,37 @@ main {
 /* Navigerings länkarna */
 .nav-links {
   list-style: none;
-  display: flex;
-  gap: 32px;
   margin: 0;
   padding: 0;
-  align-items: center;
 }
 
+.nav-links li {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav-links li:nth-child(1) {
+  left: 648px;
+}
+
+.nav-links li:nth-child(2) {
+  left: 813px;
+}
+
+.nav-links li:nth-child(3) {
+  left: 972px;
+}
+
+/* styling för navigeringslänkarna i headern*/
 .nav-links a {
-  text-decoration: none;
+  text-decoration: none; /* Tar bort så man inte får ett strck under länken */
   font-family: var(--font-base);
   font-weight: 600;
+  font-style: semibold;
   font-size: 24px;
   color: var(--black);
+  line-height: 100%;
 }
 
 /* hover effekt för navigeringsknapparna */
@@ -64,6 +87,10 @@ main {
 
 /* CTA-knapp (Call to action) */
 .nav-cta {
+  position: absolute;
+  left: 1131px;
+  top: 50%;
+  transform: translateY(-50%);
   text-decoration: none;
   font-family: var(--font-base);
   font-weight: 600;
@@ -80,27 +107,45 @@ main {
   filter: brightness(1.05);
 }
 
-/* ===== Booking sidan ===== */
+/* ===== Booking hero ===== */
 
 .booking-hero {
-  background-color: var(--liblue);
-  color: var(--black);
-  font-family: var(--font-base);
-  font-weight: 400;
-  font-size: 36px;
+  padding: 28px 0 18px;
   text-align: center;
-  
 }
 
-/* ===== Boknings Formuläret ===== */
+/* styling för texten som heter "Book Your Stay" */
+.booking-hero h1 {
+  margin: 0;  
+  font-size: 80px;
+  line-height: 100%;  
+  font-weight: 400;  
+}
 
+/* styling för texten som heter "Discover sustainable...." */
+.booking-hero p {
+  margin: 8px 0 0;  
+  font-weight: 400;
+  font-size: 36px;    
+}
+
+/* ===== Search card ===== */
+
+.booking-search {
+  padding: 14px 0 20px;
+}
+
+/* styling för formulärboxen (booking-form) */
 .booking-form {
+  background: var(--white);
+  border-radius: 14px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25); /* så här skriver man en box-shadow: X Y BLUR COLOR;*/
+  padding: 18px;
   display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin: 2rem 0;
-  flex-wrap: wrap;
+  gap: 14px;
   align-items: end;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /* label field*/
@@ -108,34 +153,41 @@ main {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  min-width: 170px;
 }
 
-/* span.field-label  */
+/* utseende för labeln där checkin står bla. */
 .field-label {
   font-family: var(--font-base);
   font-weight: 600;
+  font-style: semibold;
   font-size: 24px;
   color: var(--black);
 }
 
-/* Date inputs */
+/* utsenede för där man väljer datum */
 .date-input {
   font-family: var(--font-base);
-  font-size: var(--text-form);
-  height: 64px;
-  border-radius: 14px;
-  border: 1px solid rgba(0, 0, 0, 0.35);
-  padding: 0 16px;
+  font-size: 16px;
+  font-weight: 600;
+  font-style: semibold;
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  padding: 0 12px;
 }
 
 /* Select */
 .select {
   font-family: var(--font-base);
-  font-size: var(--text-form);
-  height: 64px;
-  border-radius: 14px;
-  border: 1px solid rgba(0, 0, 0, 0.35);
-  padding: 0 16px;
+  font-size: 16px;
+  font-weight: 600;
+  font-style: semibold;
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  padding: 0 12px;
+  background: var(--white);
 }
 
 /* Knappen */
@@ -143,52 +195,164 @@ main {
   font-family: var(--font-base);
   background-color: var(--green);
   color: var(--white);
-  width: 100%;
-  max-width: 273px;
-  height: 64px;
-  border-radius: 14px;
+  height: 44px;
+  font-weight: 600;
+  border-radius: 10px;
   border: none;
-  padding: 16px 32px;
-  font-size: var(--text-form);
+  padding: 0 18px;
+  font-size: 16px;
   cursor: pointer;
+  min-width: 150px;
 }
 
-/* Resultat */
+/* ===== Reslutatet av vilka rums som finns ===== */
+
 .booking-results {
+  padding: 16px 0 40px;
   display: grid;
-  gap: 1.5rem;
+  gap: 18px;
 }
 
-.room-card {
-  border: 1px solid #ddd;
-  padding: 1.5rem;
-  border-radius: 8px;
+.results-header h2 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 600;
 }
 
-/* ===== Det som gör sidan responsiv ===== */
+.results-header p {
+  margin: 4px 0 0;  
+  font-size: 32px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* ===== Room placeholder (inte klar) ===== */
+
+.room-placeholder {
+  background: var(--white);
+  border-radius: 14px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.10);
+  padding: 16px;
+}
+
+.room-placeholder h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.room-placeholder p {
+  margin: 0 0 8px;
+  font-size: 14px;
+}
+
+.placeholder-note {
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 12px;
+}
+
+/* Återanvändbar knapp */
+.btn-reserve {
+  margin-top: 6px;
+  height: 44px;
+  border: none;
+  border-radius: 10px;
+  background: var(--green);
+  color: var(--white);
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0 18px;
+}
+
+/* ===== Footer (Den riktiga kommer senare) ===== */
+
+.booking-footer {
+  background: var(--dkblue);
+  color: var(--white);
+  padding: 28px 0;
+}
+
+.footer-inner {
+  display: grid;
+  gap: 12px;
+  text-align: center;
+}
+
+.footer-brand {
+  margin: 0;
+  font-weight: 700;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  opacity: 0.9;
+}
+
+.footer-links p {
+  margin: 0;
+}
+
+.footer-copy {
+  margin: 0;
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+/* ===== Responsive ===== */
 
 @media (max-width: 980px) {
-  .btn-book {
-    max-width: none;
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 32px;
+  }
+
+  .nav-logo,
+  .nav-links li,
+  .nav-cta {
+    position: static;
+    transform: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+  }
+
+  .nav-links a,
+  .nav-cta {
+    font-size: 18px;
+  }
+
+  .nav-logo {
+    width: auto;
   }
 }
 
 @media (max-width: 560px) {
+  .nav {
+    padding: 12px 16px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .booking-hero {
+    padding: 18px 0 10px;
+  }
+
+  .booking-hero h1 {
+    font-size: 42px;
+  }
+
+  .booking-form {
+    padding: 14px;
+  }
+
   .field-label {
-    font-size: 18px;
+    font-size: 14px;
   }
-
-  .btn-book {
-    font-size: 18px;
-    height: 52px;
-  }
-
-  .date-input,
-  .select {
-    height: 52px;
-  } 
 }
-
-
-
-
