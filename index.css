@@ -1,3 +1,67 @@
+/*=========================================
+Hero section on landing page
+===========================================*/
+.hero {
+    background: #00000099 
+    /* height: 760px; */
+}
+
+.heroContent {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 80px 0 80px 0;
+    color: var(--white);
+}
+
+.heroContent h1, .heroContent p{
+    margin: 0;
+    font-weight: 400;
+}
+
+.heroButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.heroButtons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 16px 32px 16px 32px;
+    width: 209px;
+    height: 73px;
+}
+
+.heroBook {
+    background: linear-gradient(to left, var(--green), var(--gblue));
+    border: 0;
+}
+
+.heroLearn  {
+    background: transparent;
+    border: 1px solid var(--white);
+}
+
+@media (max-width: 600px) {
+    .heroButtons {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .heroContent h1 {
+        font-size: var(--text-h2);
+    }
+}
 
 /*=========================================
 Check in/check out on landing page
@@ -7,6 +71,7 @@ Check in/check out on landing page
 .bookingSearch {
     background: linear-gradient(to left, var(--green), var(--gblue));
     padding: 40px 0 40px 0;
+    border-top: 4px solid var(--white); /*For myself*/
 } 
 
 .bookingForm {
@@ -78,6 +143,11 @@ button {
     place-items: center;
 }
 }
-/*=========================================
-End Check in/check out on landing page
-===========================================*/
+@media (max-width: 600px) {
+    .bookingForm {
+        display: grid;
+        grid-template-columns: repeat(1, 230px);
+        column-gap: 22px;
+        place-items: center;
+    }
+}
