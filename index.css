@@ -160,6 +160,98 @@ button {
 }
 
 /*=========================================
+Our vision on landing page
+===========================================*/
+.vision {
+    background-color: var(--white);
+    text-align: center;
+    padding: 40px 0;
+}
+
+.vision h2 {
+    margin: 0 0 16px 0;
+    color: var(--black);
+    font-weight: 400;
+}
+
+.vision p {
+    font-family: 'Montserrat';
+    max-width: 750px;
+    margin: 0 auto 48px auto;
+    color: var(--black);
+}
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 270px);
+    justify-content: center;
+    gap: 15px;
+}
+
+.card {
+    width: 270px;
+    height: 412px;
+    border: 1px solid var(--grey);
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-right: 30px;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
+}
+
+.card h3 {
+    font-weight: 400;
+    color: var(--black);
+    font-size: var(--text-h3);
+}
+
+.card p {
+    color: var(--black);
+    font-size: var(--text-body);
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #88DC84;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+}
+
+.card-icon {
+    width: 32px;
+    height: 32px;
+}
+
+@media (max-width: 1130px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 270px);
+        gap: 40px;
+    }
+
+        .vision p {
+            max-width: 585px;
+        }
+}
+
+@media (max-width: 600px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        justify-items: center;
+    }
+
+        .vision p {
+            max-width: 260px;
+        }
+}
+
+/*=========================================
 Ready to Transform on landing page
 ===========================================*/
 .readyToTransform {
