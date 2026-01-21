@@ -1,345 +1,328 @@
+/* Every var(--text) comes from the main styles.css */
+
+
 /* bookingstyles.css */
+/* i had to import the font from google to make the font work */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+/* color on background and make it full height on device */
 .booking-page {
   background: var(--liblue);
-  min-height: 100vh;  
+  min-height: 100vh;
 }
 
-/* ===== Header och Navigationsmenyn ===== Denna ska vara samma för alla sidor*/
-
+/* ========== HEADER ========== */
 .site-header {
   background: var(--white);
-  width: 100%;
-  height: 147px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-  position: relative;
 }
 
 .nav {
-  position: relative;
-  height: 100%;
-}
-
-/* Logon i headen */
-.nav-logo {
-  position: absolute;
-  left: 100px;
-  top: 50%;
-  transform: translateY(-50%);
   display: flex;
   align-items: center;
-  width: 322px;
-  height: 78px;
-  opacity: 1;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 16px;
+}
+
+/* set the nav wrapper height */
+.nav.wrapper {  
+  margin: 0 auto;
+  height: 147px;
 }
 
 .nav-logo img {
-  height: 78px;
+  height: 54px;
   width: auto;
   display: block;
 }
 
-/* Navigerings länkarna */
 .nav-links {
   list-style: none;
+  display: flex;
+  gap: 28px;
   margin: 0;
   padding: 0;
 }
 
-.nav-links li {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.nav-links li:nth-child(1) {
-  left: 648px;
-}
-
-.nav-links li:nth-child(2) {
-  left: 813px;
-}
-
-.nav-links li:nth-child(3) {
-  left: 972px;
-}
-
-/* styling för navigeringslänkarna i headern*/
 .nav-links a {
-  text-decoration: none; /* Tar bort så man inte får ett strck under länken */
-  font-family: var(--font-base);
+  text-decoration: none;
   font-weight: 600;
-  font-style: semibold;
-  font-size: 24px;
+  font-size: 18px;
   color: var(--black);
-  line-height: 100%;
 }
 
-/* hover effekt för navigeringsknapparna */
 .nav-links a:hover {
   color: var(--green);
 }
 
-/* Visar vilken sida som är vald */
 .nav-links a.active {
   color: var(--green);
   font-weight: 700;
 }
 
-/* CTA-knapp (Call to action) */
 .nav-cta {
-  position: absolute;
-  left: 1131px;
-  top: 50%;
-  transform: translateY(-50%);
   text-decoration: none;
-  font-family: var(--font-base);
   font-weight: 600;
-  font-size: 24px;
+  font-size: 18px;
   color: var(--white);
-  background-color: var(--green);
-  padding: 16px 32px;
+  background: var(--green);
+  padding: 14px 22px;
   border-radius: 10px;
   white-space: nowrap;
 }
 
-/* hover för CTA-knappen */
-.nav-cta:hover {
-  filter: brightness(1.05);
-}
-
-/* ===== Booking hero ===== */
-
+/* ========== HERO ========== */
 .booking-hero {
-  padding: 28px 0 18px;
+  padding: 32px 0 14px;
   text-align: center;
 }
 
-/* styling för texten som heter "Book Your Stay" */
 .booking-hero h1 {
-  margin: 0;  
-  font-size: 80px;
-  line-height: 100%;  
-  font-weight: 400;  
-}
-
-/* styling för texten som heter "Discover sustainable...." */
-.booking-hero p {
-  margin: 8px 0 0;  
+  margin: 0;
   font-weight: 400;
-  font-size: 36px;    
+  line-height: 1;
 }
 
-/* ===== Search card ===== */
+.booking-hero p {
+  margin: 10px 0 0;
+  font-size: 36px;
+  font-weight: 400;
+}
 
+/* ========== SEARCH CARDET ========== */
 .booking-search {
-  padding: 14px 0 20px;
+  padding: 10px 0 20px;
 }
 
-/* styling för formulärboxen (booking-form) */
 .booking-form {
   background: var(--white);
   border-radius: 14px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25); /* så här skriver man en box-shadow: X Y BLUR COLOR;*/
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
   padding: 18px;
-  display: flex;
+
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 14px;
   align-items: end;
-  justify-content: center;
-  flex-wrap: wrap;
 }
 
-/* label field*/
 .field {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  min-width: 170px;
+  gap: 8px;
 }
 
-/* utseende för labeln där checkin står bla. */
 .field-label {
-  font-family: var(--font-base);
   font-weight: 600;
-  font-style: semibold;
   font-size: 24px;
-  color: var(--black);
 }
 
-/* utsenede för där man väljer datum */
-.date-input {
-  font-family: var(--font-base);
-  font-size: 16px;
-  font-weight: 600;
-  font-style: semibold;
-  height: 44px;
-  border-radius: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.25);
-  padding: 0 12px;
-}
-
-/* Select */
+.date-input,
 .select {
-  font-family: var(--font-base);
-  font-size: 16px;
-  font-weight: 600;
-  font-style: semibold;
-  height: 44px;
+  height: 65px;
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.25);
   padding: 0 12px;
   background: var(--white);
+  font-weight: 600;
 }
 
-/* Knappen */
 .btn-book {
-  font-family: var(--font-base);
-  background-color: var(--green);
-  color: var(--white);
-  height: 44px;
-  font-weight: 600;
-  border-radius: 10px;
-  border: none;
-  padding: 0 18px;
-  font-size: 16px;
-  cursor: pointer;
-  min-width: 150px;
-}
-
-/* ===== Reslutatet av vilka rums som finns ===== */
-
-.booking-results {
-  padding: 16px 0 40px;
-  display: grid;
-  gap: 18px;
-}
-
-.results-header h2 {
-  margin: 0;
-  font-size: 48px;
-  font-weight: 600;
-}
-
-.results-header p {
-  margin: 4px 0 0;  
-  font-size: 32px;
-  color: rgba(0, 0, 0, 0.7);
-}
-
-/* ===== Room placeholder (inte klar) ===== */
-
-.room-placeholder {
-  background: var(--white);
-  border-radius: 14px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.10);
-  padding: 16px;
-}
-
-.room-placeholder h3 {
-  margin: 0 0 6px;
-  font-size: 18px;
-  font-weight: 700;
-}
-
-.room-placeholder p {
-  margin: 0 0 8px;
-  font-size: 14px;
-}
-
-.placeholder-note {
-  color: rgba(0, 0, 0, 0.65);
-  font-size: 12px;
-}
-
-/* Återanvändbar knapp */
-.btn-reserve {
-  margin-top: 6px;
   height: 44px;
   border: none;
   border-radius: 10px;
   background: var(--green);
   color: var(--white);
   font-weight: 700;
-  cursor: pointer;
-  padding: 0 18px;
+  cursor: not-allowed;
 }
 
-/* ===== Footer (Den riktiga kommer senare) ===== */
-
-.booking-footer {
-  background: var(--dkblue);
-  color: var(--white);
-  padding: 28px 0;
+/* ========== RESULTS ========== */
+.booking-results {
+  padding: 18px 0 44px;
 }
 
-.footer-inner {
+.results-header h2 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 48px;
+}
+
+.results-header p {
+  margin: 6px 0 16px;
+  font-size: 32px;
+  font-weight: 400;
+  
+}
+
+/* ========== ROOM CARDS ========== */
+
+.room-card {
+  background: var(--white);
+  border-radius: 14px;
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+
   display: grid;
-  gap: 12px;
-  text-align: center;
+  grid-template-columns: 42% 58%;
+  margin-bottom: 18px;
 }
 
-.footer-brand {
+.room-card--reverse .room-media { order: 2; }
+.room-card--reverse .room-info  { order: 1; }
+
+.room-media {
+  position: relative;
   margin: 0;
+  min-height: 220px;
+}
+
+.room-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.room-rating {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 999px;
+  padding: 6px 10px;
   font-weight: 700;
+  font-size: 14px;
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
 }
 
-.footer-links {
+.room-rating .star {
+  color: #f59e0b;
+}
+
+.room-info {
+  padding: 18px;
   display: flex;
-  justify-content: center;
-  gap: 40px;
-  opacity: 0.9;
+  flex-direction: column;
+  gap: 12px;
 }
 
-.footer-links p {
-  margin: 0;
+.room-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  align-items: flex-start;
 }
 
-.footer-copy {
+.room-head h3 {
   margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.room-sub {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.65);
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.inline-icon {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.room-price {
+  margin: 0;
+  color: var(--green);
+  font-weight: 800;
+  text-align: right;
+}
+
+.room-price span {
+  display: block;
   font-size: 12px;
-  opacity: 0.85;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.55);
 }
 
-/* ===== Responsive ===== */
+.room-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
 
-@media (max-width: 980px) {
-  .nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px 32px;
-  }
+.block-title {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.7);
+}
 
-  .nav-logo,
-  .nav-links li,
-  .nav-cta {
-    position: static;
-    transform: none;
-  }
+.block-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
 
-  .nav-links {
-    display: flex;
-    gap: 32px;
-  }
+.room-text {
+  margin: 0;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.75);
+}
 
-  .nav-links a,
-  .nav-cta {
-    font-size: 18px;
-  }
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
 
-  .nav-logo {
-    width: auto;
+.tag {
+  background: #efefef;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.tags-ai .tag {
+  background: rgba(152, 16, 250, 0.10);
+  color: #6d28d9;
+}
+
+.btn-reserve {
+  margin-top: auto;
+  width: 100%;
+  height: 44px;
+  border: none;
+  border-radius: 10px;
+  background: var(--green);
+  color: var(--white);
+  font-weight: 700;
+  cursor: not-allowed;
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 1000px) {
+  .booking-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-@media (max-width: 560px) {
-  .nav {
-    padding: 12px 16px;
-  }
-
-  .nav-links {
-    display: none;
-  }
-
+@media (max-width: 576px) {
   .booking-hero {
     padding: 18px 0 10px;
   }
@@ -348,11 +331,28 @@
     font-size: 42px;
   }
 
-  .booking-form {
-    padding: 14px;
+  .booking-hero p {
+    font-size: 18px;
   }
 
-  .field-label {
-    font-size: 14px;
+  .booking-form {
+    grid-template-columns: 1fr;
+  }
+
+  .room-card {
+    grid-template-columns: 1fr;
+  }
+
+  .room-media {
+    min-height: 180px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-cta {
+    font-size: 16px;
+    padding: 12px 16px;
   }
 }
