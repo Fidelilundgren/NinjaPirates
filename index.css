@@ -211,6 +211,7 @@ Our vision on landing page
 .card p {
     color: var(--black);
     font-size: var(--text-body);
+    font-weight: 400;
 }
 
 .icon {
@@ -249,6 +250,100 @@ Our vision on landing page
         .vision p {
             max-width: 260px;
         }
+}
+
+/*=========================================
+Sustainablility on landing page
+===========================================*/
+.sustain {
+    background-color: #D4FFF3;
+    text-align: center;
+    padding: 40px 0;
+    font-family: var(--fontBase);
+}
+
+.sustain h2 {
+    margin: 0 0 16px 0;
+    color: var(--black);
+    font-weight: 400;
+}
+
+.sustain p {
+    margin: 0 auto 48px auto;
+    color: var(--black);
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.s-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 265px);
+    justify-content: center;
+    gap: 15px;
+}
+
+.s-card {
+    width: 265px;
+    height: 380px;
+    border: 1px solid var(--grey);
+    border-radius: 20px;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.s-card h3 {
+    font-weight: 400;
+    color: var(--green);
+    font-size: var(--text-h3);
+    margin: 30px 0 0 0;
+}
+
+.s-card h4 {
+    font-weight: 400;
+    color: var(--black);
+    font-size: 28px;
+}
+
+.s-card p {
+    color: var(--black);
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.s-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #88DC84;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+}
+
+.s-card-icon {
+    width: 32px;
+    height: 32px;
+}
+
+@media (max-width: 1130px) {
+    .s-cards-grid {
+        grid-template-columns: repeat(2, 270px);
+        gap: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .s-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        justify-items: center;
+    }
 }
 
 /*=========================================
