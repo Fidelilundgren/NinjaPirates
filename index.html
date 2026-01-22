@@ -2,13 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="index.css">
     <title>bonz.ai</title>
 </head>
 <body>
+    <!--Header for all pages with hamburger-->
+<script src="main.js"></script>
+    <header class="site-header">
+        <nav class="nav wrapper">
+            <a href="index.html" class="nav-logo" aria-label="Bonz.ai Home">
+                <img src="assets/assets/logo/bonz.ai-logo-color-landscape.png" alt="Bonz.ai logo" />
+            </a>
+                <button class="hamburger" onclick="myFunction()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            <ul class="nav-links" id="links-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="booking.html" class="active" aria-current="page">Booking</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <a href="booking.html" class="nav-cta">Book your stay</a>
+        </nav>
+    </header>
+
 <!-- Hero section-->
 <section class="hero">
     <div class="wrapper">
