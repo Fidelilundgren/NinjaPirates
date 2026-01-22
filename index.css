@@ -1,9 +1,132 @@
 /*=========================================
+       Header for all pages
+===========================================*/
+.site-header {
+    background: var(--white);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.nav {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    place-items: center;
+    gap: 16px;
+    padding: 18px 16px;
+    width: 100%;
+}
+
+.nav.wrapper {
+    margin: 0 auto;
+    height: 147px;
+}
+
+.nav-logo img {
+    height: 54px;
+    width: auto;
+    display: block;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    text-align: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--black);
+}
+
+.nav-links a:hover {
+    color: var(--green);
+}
+
+.nav-links a.active {
+    color: var(--green);
+    font-weight: 700;
+}
+
+.nav-cta {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--white);
+    background: var(--green);
+    padding: 14px 22px;
+    border-radius: 10px;
+    white-space: nowrap;
+    justify-self: center;
+}
+/*Started here//F*/
+.hamburger {
+    display: none;
+    border: 0;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--white);
+}
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    border-bottom: 2px black solid;
+}
+
+/*For screens less than 800px*/
+@media (max-width: 800px) {
+
+    .nav.wrapper {
+        height: auto;
+    }
+
+    .nav {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto auto;
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav-logo {
+        display: flex;
+        grid-column: 1;
+        align-items: flex-start;
+        justify-self: start;
+    }
+
+    .hamburger {
+        display: flex;
+        grid-column: 2;
+        align-items: flex-end;
+        justify-self: end;
+        width: fit-content;
+    }
+
+    .nav-links {
+        grid-column: 2;
+        display: none;
+        flex-direction: column;
+        justify-self: end;
+    }
+
+    .nav-cta {
+        display: none;
+        grid-column: 2;
+    }
+}
+
+/*=========================================
 Hero section on landing page
 ===========================================*/
 .hero {
-background:
-    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    background: linear-gradient(rgba(0, 0, 0, 0.45), 
+    rgba(0, 0, 0, 0.45)),
     url("assets/assets/photos/hero.jpg");
     background-size: cover;
     background-position: center;
@@ -92,8 +215,8 @@ Check in/check out on landing page
 
 /*All fonts having the same design*/
 .defaultFont {
-    font-size: var(--textForm);
-    font-family: var(--fontBase);
+    font-size: var(--text-form);
+    font-family: var(--font-base);
     font-weight: 600;
 }
 
@@ -141,14 +264,15 @@ button {
 .bookingForm button:hover {
     background: var(--grey);
 }
+
 /*For screens less than 1050px I want to have two elements/row instead of 3/4*/
 @media (max-width: 1050px)  {
-    .bookingForm{
-    display: grid;
-    grid-template-columns: repeat(2, 230px);
-    column-gap: 22px;
-    place-items: center;
-}
+    .bookingForm {
+        display: grid;
+        grid-template-columns: repeat(2, 230px);
+        column-gap: 22px;
+        place-items: center;
+    }
 }
 @media (max-width: 600px) {
     .bookingForm {
@@ -255,11 +379,12 @@ Our vision on landing page
 /*=========================================
 Sustainablility on landing page
 ===========================================*/
+
 .sustain {
     background-color: #D4FFF3;
     text-align: center;
-    padding: 40px 0;
-    font-family: var(--fontBase);
+    padding: 50px 0 70px 0;
+    font-family: var(--font-base);
 }
 
 .sustain h2 {
@@ -277,13 +402,13 @@ Sustainablility on landing page
 
 .s-cards-grid {
     display: grid;
-    grid-template-columns: repeat(4, 265px);
+    grid-template-columns: repeat(4, 270px);
     justify-content: center;
     gap: 15px;
 }
 
 .s-card {
-    width: 265px;
+    width: 270px;
     height: 380px;
     border: 1px solid var(--grey);
     border-radius: 20px;
@@ -292,9 +417,7 @@ Sustainablility on landing page
     flex-direction: column;
     text-align: center;
     align-items: center;
-    padding-top: 20px;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding: 15px 10px;
 }
 
 .s-card h3 {
@@ -307,7 +430,7 @@ Sustainablility on landing page
 .s-card h4 {
     font-weight: 400;
     color: var(--black);
-    font-size: 28px;
+    font-size: 25px;
 }
 
 .s-card p {
@@ -350,7 +473,6 @@ Sustainablility on landing page
 Ready to Transform on landing page
 ===========================================*/
 .readyToTransform {
-    border-top: 4px solid var(--white); /*For myself*/
     background: linear-gradient(to left, var(--gblue), var(--green));
     padding: 50px 0 50px 0;
 }
