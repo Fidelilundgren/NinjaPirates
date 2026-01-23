@@ -470,7 +470,125 @@ Sustainablility on landing page
 }
 
 /*=========================================
-Ready to Transform on landing page
+ Your AI-Enhanced Stay on landing page
+===========================================*/
+
+.defaultFontLight {
+    font-size: var(--text-body);
+    font-family: var(--font-base);
+    font-weight: 400;
+}
+
+ .aiStay {
+    background: var(--white);
+    padding: 80px 10px 50px 10px;
+}
+
+.aiStay .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    place-items: center;
+}
+
+.stay-card {
+    display: grid;
+    gap: 8px;
+} 
+
+.stay-card h2 {
+    font-size: 38px; /*figma was 48 - too big*/
+    margin: 0;
+}
+
+.stay-card h2, 
+.aiList h3, 
+.aiList {
+    margin: 0;
+}
+
+.aiText {
+    max-width: 40ch;
+    justify-content: center;
+    align-items: center;
+}
+
+.aiText, 
+.aiList p, 
+.aiList h3 {
+    max-width: 40ch;
+}
+
+.aiList {
+    list-style: none;
+    padding: 0;
+}
+
+.aiList p {
+    margin: 0 0 30px 0;
+}
+
+.aiButn {
+    width: 306px;
+    height: 73px;
+    border-radius: 10px;
+    background: var(--green);
+    color: var(--white);
+    font-family: var(--font-base);
+    font-size: 24px;
+}
+
+.aiImg img {
+    width: 100%;
+    max-width: 525px;
+    height: 550px;
+    border-radius: 24px;
+    object-fit: cover;
+    display: block;
+    object-position: center;
+    overflow: hidden;
+}
+
+/*For screens under 900px*/
+@media (max-width: 900px) {
+
+    .aiStay {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .aiStay .wrapper{
+        grid-template-columns: 1fr;
+        gap: 10px;
+        place-items: stretch;
+    }
+
+        .stay-card h2 {
+            font-size: 25px;
+        }
+
+        .aiText,
+        .aiList p,
+        .aiList h3 {
+            max-width: 100%;
+        }
+
+             .aiButn {
+                    width: 100%;
+                    max-width: 306px;
+                    justify-self: center;
+                    
+                }
+        
+                .aiImg img {
+                    height: auto;
+                    max-width: 100%;
+                }
+    
+}
+
+/*=========================================
+ Ready to Transform on landing page
 ===========================================*/
 .readyToTransform {
     background: linear-gradient(to left, var(--gblue), var(--green));
