@@ -197,7 +197,7 @@
   background: var(--green);
   color: var(--white);
   font-weight: 700;
-  cursor: not-allowed;
+  cursor: pointer;
 }
 
 /* ========== RESULTS ========== */
@@ -377,7 +377,7 @@
 }
 
 /*=========================================
-    Tillfällig footer
+    Footer
 ===========================================*/
 
 footer {
@@ -388,7 +388,6 @@ footer {
     margin: 0 auto; */
 }
 
-
 .footer-container {
     display: grid;
 
@@ -396,9 +395,6 @@ footer {
     gap: 100px;
 
 }
-
-
-
 
 .brand-info {
     max-width: 350px;
@@ -428,7 +424,6 @@ footer {
     font-weight: bold;
     margin: 0;
 }
-
 
 /* .tagline {
     color: var(--accent-color);
@@ -497,7 +492,6 @@ h4 {
     color: var(--white);
 }
 
-
 @media (max-width: 768px) {
 
     .container {
@@ -561,4 +555,17 @@ h4 {
     font-size: 16px;
     padding: 12px 16px;
   }
+}
+
+/* Booking page JavaScript (results hidden first + simple error text) */
+.search-results {
+  display: none;
+  gap: 18px;
+}
+
+.form-error {
+  margin: 8px 0 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #b00020;
 }
