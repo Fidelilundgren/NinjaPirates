@@ -11,24 +11,26 @@
 </head>
 
 <body class="booking-page">
-  <header class="site-header">
-    <nav class="nav wrapper">
-      <a href="index.html" class="nav-logo" aria-label="Bonz.ai Home">
-        <img
-          src="assets/assets/logo/bonz.ai-logo-color-landscape.png"
-          alt="Bonz.ai logo"
-        />
-      </a>
-
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="booking.html" class="active" aria-current="page">Booking</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
-
-      <a href="booking.html" class="nav-cta">Book your stay</a>
-    </nav>
-  </header>
+    <!--Header for all pages with hamburger-->
+<script src="main.js"></script>
+    <header class="site-header">
+        <nav class="nav wrapper">
+            <a href="index.html" class="nav-logo" aria-label="Bonz.ai Home">
+                <img src="assets/assets/logo/bonz.ai-logo-color-landscape.png" alt="Bonz.ai logo" />
+            </a>
+                <button class="hamburger" onclick="myFunction()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            <ul class="nav-links" id="links-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="booking.html" class="active" aria-current="page">Booking</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <a href="booking.html" class="nav-cta">Book your stay</a>
+        </nav>
+    </header>
 
   <main>
     <section class="booking-hero">
@@ -438,46 +440,51 @@
     </section>
   </main>
 
-  <!-- Footer (team code) -->
-  <footer>
-    <div class="wrapper">
-      <div class="footer-container">
-        <div class="logo-section">
-          <div class="logo">
-            <img
-              src="assets/assets/logo/bonz.ai-logo-color-portrait-full.png"
-              alt="Bonz.ai Logo"
-              class="logo-image"
-            />
-          </div>
-          <p class="description">
-            The hotel of the future, where sustainability meets smart technology. Experience AI-driven hospitality with an eco-conscious heart.
-          </p>
+   <footer>
+    
+    
+        <div class="wrapper">
+            <div class="footer-container">
+    
+                <div class="logo-section">
+    
+                    <div class="logo">
+    
+                        <img src="assets\assets\logo\bonz.ai-logo-color-portrait-full.png" alt="Bonz.ai Logo"
+                            class="logo-image">
+    
+                    </div>
+    
+                    <p class="description">The hotel of the future, where sustainability meets smart technology.
+                        Experience
+                        AI-driven hospitality with an eco-conscious heart.</p>
+                </div>
+    
+                <div class="contact-section">
+    
+                    <h4>Contact</h4>
+                    <p>123 Green Street, Eco City, EC 12345</p>
+                    <p>+1 (555) 123-4567</p>
+                    <p>hello@bonz.ai</p>
+                </div>
+                <div class="links-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Sustainability Report</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <hr>
+                <p>© 2025 Bonz.ai. All rights reserved. Building a sustainable future, one stay at a time.</p>
+            </div>
+    
         </div>
-
-        <div class="contact-section">
-          <h4>Contact</h4>
-          <p>123 Green Street, Eco City, EC 12345</p>
-          <p>+1 (555) 123-4567</p>
-          <p>hello@bonz.ai</p>
-        </div>
-
-        <div class="links-section">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Sustainability Report</a></li>
-            <li><a href="#">Careers</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <hr />
-        <p>© 2025 Bonz.ai. All rights reserved. Building a sustainable future, one stay at a time.</p>
-      </div>
-    </div>
-  </footer>
+        
+    
+    </footer>
 </body>
 </html>
