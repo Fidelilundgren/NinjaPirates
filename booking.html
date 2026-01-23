@@ -12,7 +12,7 @@
 
 <body class="booking-page">
     <!--Header for all pages with hamburger-->
-<script src="main.js"></script>
+<script src="main.js" defer></script>
     <header class="site-header">
         <nav class="nav wrapper">
             <a href="index.html" class="nav-logo" aria-label="Bonz.ai Home">
@@ -42,22 +42,23 @@
 
     <section class="booking-search">
       <div class="wrapper">
-        <form class="booking-form" action="#" method="get">
+        <form class="booking-form" id="booking-form" action="#" method="get">
           <label class="field">
             <span class="field-label">Check-in</span>
-            <input class="date-input" type="date" name="checkin" />
+            <input class="date-input" type="date" id="check-in" name="checkin" />
           </label>
 
           <label class="field">
             <span class="field-label">Check-out</span>
-            <input class="date-input" type="date" name="checkout" />
+            <input class="date-input" type="date" id="check-out" name="checkout" />
           </label>
 
           <label class="field">
             <span class="field-label">Guests</span>
-            <select name="guests" class="select">
+            <select name="guests" id="guests" class="select">
+              <option value="">Select</option>
               <option value="1">1 Guest</option>
-              <option value="2" selected>2 Guests</option> <!-- 2 guest is selected as default -->
+              <option value="2">2 Guests</option> <!-- 2 guest is selected as default -->
               <option value="3">3 Guests</option>
               <option value="4">4 Guests</option>
             </select>
@@ -73,7 +74,9 @@
             </select>
           </label>
 
-          <button class="btn-book" type="button" aria-disabled="true">
+          <p id="booking-error" class="form-error"></p>
+
+          <button class="btn-book" type="submit">
             Book now
           </button>
         </form>
@@ -86,6 +89,8 @@
           <h2>6 Rooms Available</h2>
           <p>Select dates to see availability</p>
         </header>
+
+        <div id="search-results" class="search-results">
 
         <!-- Room card 1 (i used this and copied it to the other 5)-->
         <article class="room-card">
@@ -435,6 +440,8 @@
             </button>
           </div>
         </article>
+
+        </div>
 
       </div>
     </section>
