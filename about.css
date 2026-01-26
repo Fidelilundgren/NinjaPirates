@@ -6,7 +6,8 @@
 
 .container {
             display: grid;
-            grid-template-columns: repeat(3, 300px);
+            grid-template-columns: repeat(3, 400px);
+            grid-template-rows: 1fr;
             /*  1fr auto auto */
             gap: 15px; 
             background-color: var(--liblue);
@@ -56,14 +57,14 @@
             object-position: top;
             max-width: fit-content;
             max-height: fit-content;
-            padding-bottom: 30px;
+            padding-bottom: 10px;
          
 }
 
         .box-top { 
             flex-wrap: wrap;
-            width: 295px;
-            height: 370px;
+            width: 400px;
+            height: 100%;
             background-color:var(--white);
             border-radius: 24px; 
             border-color: black 20px;
@@ -77,20 +78,22 @@
         .stor-text{
 
             /* font-size: 30px; */
-            font-size: var(--text-h3);
-
-            font: var(--font-base);
+            font-size: 28px;
+            font-family: var(--font-base);
             padding: 9px;
-            margin-top: 50%;
+            /* margin-top: 50%; */
+            margin:0;
+            font-weight: 400;
+
         }
         
         .liten-text{
             font: var(--font-base);
-            font-size: var(--textbody);
+            font-size: var(--text-body);
             position: relative;
             display: inline-block;
             padding: 9px; 
-            bottom: 15px;
+            /* bottom: 15px; */
         
 
         }
@@ -102,8 +105,8 @@
 
         .box-bottom{
             flex-wrap: wrap;
-            width: 295px;
-            height: 370px;
+            width: 400px;
+            height: 100%;
             background-color:var(--white);
             border-radius: 24px; 
             border-color: black 20px;
@@ -121,6 +124,7 @@
     background-color: var(--dkblue); 
     padding: 60px 80px 30px;
     font-family: var(--font-base);
+    font-size: var(--text-f);
     /* max-width: 1240px;
     margin: 0 auto; */
 } 
