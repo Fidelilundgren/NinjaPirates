@@ -286,6 +286,21 @@ button {
 /*=========================================
 Our vision on landing page
 ===========================================*/
+
+.defaultFontCards {
+    font-family: var(--font-base);
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.card h3,
+.v-cards-p,
+.s-card h3,
+.s-card h4,
+.s-cards-text {
+    margin: 0;
+}
+
 .vision {
     background-color: var(--white);
     text-align: center;
@@ -293,49 +308,50 @@ Our vision on landing page
 }
 
 .vision h2 {
-    margin: 0 0 16px 0;
+    margin: 0 0 30px 0;
     color: var(--black);
-    font-weight: 400;
 }
 
-.vision p {
+.vision-p {
     font-family: 'Montserrat';
-    max-width: 750px;
+    max-width: 65ch;
     margin: 0 auto 48px auto;
     color: var(--black);
+    font-weight: 400;
+    line-height: 1.2;
+    padding: 0 5px 0 5px;
 }
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(4, 270px);
     justify-content: center;
     gap: 15px;
+    padding: 15px;
 }
 
 .card {
     width: 270px;
-    height: 412px;
+    height: 410px;
     border: 1px solid var(--grey);
     border-radius: 20px;
-    padding-left: 20px;
-    padding-top: 20px;
-    padding-right: 30px;
+    padding: 20px 15px 0 15px;
     background-color: var(--white);
     display: flex;
     flex-direction: column;
     text-align: left;
     align-items: flex-start;
+    gap: 30px;
 }
 
 .card h3 {
-    font-weight: 400;
     color: var(--black);
     font-size: var(--text-h3);
 }
 
-.card p {
+.v-cards-p {
     color: var(--black);
     font-size: var(--text-body);
-    font-weight: 400;
+    max-width: 25ch;
 }
 
 .icon {
@@ -353,26 +369,44 @@ Our vision on landing page
     height: 32px;
 }
 
-@media (max-width: 1130px) {
-    .cards-grid {
-        grid-template-columns: repeat(2, 270px);
-        gap: 40px;
-    }
-
-        .vision p {
-            max-width: 585px;
+ @media (max-width: 1155px) {
+    
+        .cards-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            justify-content: stretch;
         }
-}
+
+ .card {
+    height: 345px;
+        width: 100%;
+        max-width: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: flex-start;
+        gap: 20px;
+ }
+
+ .card h3 {
+     margin: 0;
+     min-height: 2.4em;
+     max-width: 12ch;
+ }
+
+ .v-cards-p {
+     margin: 0;
+     max-width: 45ch;
+     min-height: 4.2em;
+   }
+ }
 
 @media (max-width: 600px) {
     .cards-grid {
         grid-template-columns: 1fr;
-        gap: 32px;
-        justify-items: center;
     }
-
-        .vision p {
-            max-width: 260px;
+        .card {
+            height: 320px;
         }
 }
 
@@ -384,20 +418,17 @@ Sustainablility on landing page
     background-color: #D4FFF3;
     text-align: center;
     padding: 50px 0 70px 0;
-    font-family: var(--font-base);
 }
 
 .sustain h2 {
-    margin: 0 0 16px 0;
+    margin: 0 0 30px 0;
     color: var(--black);
-    font-weight: 400;
 }
 
-.sustain p {
-    margin: 0 auto 48px auto;
+.sustain-p {
+    margin: 0 auto 30px auto;
+    font-size: var(--text-form);
     color: var(--black);
-    font-size: 24px;
-    font-weight: 400;
 }
 
 .s-cards-grid {
@@ -405,6 +436,7 @@ Sustainablility on landing page
     grid-template-columns: repeat(4, 270px);
     justify-content: center;
     gap: 15px;
+    padding: 15px;
 }
 
 .s-card {
@@ -417,26 +449,23 @@ Sustainablility on landing page
     flex-direction: column;
     text-align: center;
     align-items: center;
-    padding: 15px 10px;
+    padding: 15px 10px 0 10px;
+    gap: 20px;
 }
 
 .s-card h3 {
-    font-weight: 400;
     color: var(--green);
-    font-size: var(--text-h3);
-    margin: 30px 0 0 0;
+    margin: 0;
 }
 
 .s-card h4 {
-    font-weight: 400;
+    font-size: 25px; /*28 was too big*/
     color: var(--black);
-    font-size: 25px;
 }
 
-.s-card p {
+.s-cards-text {
+    font-size: var(--text-body);
     color: var(--black);
-    font-size: 20px;
-    font-weight: 400;
 }
 
 .s-icon {
@@ -454,20 +483,58 @@ Sustainablility on landing page
     height: 32px;
 }
 
-@media (max-width: 1130px) {
+@media (max-width: 1155px) {
+
+    .sustain {
+            padding: 40px 0 30px 0;
+        }
+
     .s-cards-grid {
-        grid-template-columns: repeat(2, 270px);
-        gap: 40px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        justify-content: stretch;
     }
+
+    .s-card {
+        height: 320px;
+            width: 100%;
+            max-width: none;
+            gap: 20px;
+    }
+
+          .s-card h3,
+          .s-card h4,
+            .s-cards-text {
+              margin: 0;
+          }
+
+          .s-icon {
+              margin-bottom: 10px;
+          }
+    
+          .s-card h4 {
+              min-height: 1.5em;
+          }
+    
+            .s-cards-text {
+              min-height: 3em;
+              max-width: 33ch;
+          }
+                  .sustain h2 {
+                      font-size: 38px;
+                  }
+                    .sustain-p {
+                    margin-bottom: 30px;
+                  }
 }
 
 @media (max-width: 600px) {
     .s-cards-grid {
         grid-template-columns: 1fr;
-        gap: 32px;
-        justify-items: center;
     }
-}
+        .sustain h2 {
+            font-size: 32px;
+        }
+} 
 
 /*=========================================
  Your AI-Enhanced Stay on landing page
