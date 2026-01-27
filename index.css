@@ -693,9 +693,10 @@ Sustainablility on landing page
 /*=========================================
  Ready to Transform on landing page
 ===========================================*/
+
 .readyToTransform {
     background: linear-gradient(to left, var(--gblue), var(--green));
-    padding: 50px 0 50px 0;
+    padding: 50px 0;
 }
 
 .readyToTransform .wrapper {
@@ -703,27 +704,30 @@ Sustainablility on landing page
     grid-template-columns: 1fr;
     place-items: center;
     text-align: center;
-    row-gap: 30px;
+    row-gap: 15px;
 }
 
-.readyToTransform h2, .readyToTransform p {
+.readyToTransform h2 {
     margin: 0;
     color: var(--white);
-    font-weight: 400;
-    padding: 0 20px 0 20px;
+    padding: 0 20px;
+    font-size: 38px;
 }
 
-.readyToTransform p {
-    font-size: var(--text-h3);
+.ready-text {
+    color: var(--white);
+    font-size: var(--text-form);
+    margin: 0;
+    padding: 0 20px;
 }
 
-.readyToTransform p span {
-    display: block;
+/* Smaller spacing between the two lines */
+.ready-text+.ready-text {
+    margin-top: -10px;
 }
 
-.readyToTransform button {
+.ready {
     display: flex;
-    justify-self: center;
     justify-content: center;
     align-items: center;
     width: 192px;
@@ -732,168 +736,30 @@ Sustainablility on landing page
     border: 0;
     background-color: rgba(255, 255, 255, 0.7);
     color: var(--green);
-    font-weight: 600;
-    text-decoration: none;
+    cursor: pointer;
 }
 
-/*For screens less than 1040px i want <p> to flow*/
+/* Small "animation" on the button to have a click effect */
+.readyToTransform .ready:hover {
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+.readyToTransform .ready:active {
+    transform: translateY(1px);
+}
+
+/*For screens less than 1040px PO want it smaller*/
 @media (max-width: 1040px) {
-    .readyToTransform p span {
-        display: inline;
-    }
-}
-
-/*For screens less than 690px I'm changing to smaller font size*/
-@media (max-width: 690px) {
     .readyToTransform h2 {
         font-size: var(--text-h3);
     }
-        .readyToTransform p {
-            font-size: var(--textForm);
-        }
+        .ready-text {
+                font-size: var(--text-body);
+            }   
 }
 
-/*=========================================
-    Tillfällig footer
-===========================================*/
-
-footer {
-    background-color: var(--dkblue);
-    padding: 60px 80px 30px;
-    font-family: var(--font-base);
-    /* max-width: 1240px;
-    margin: 0 auto; */
-}
-
-
-.footer-container {
-    display: grid;
-
-    grid-template-columns: 1fr auto auto;
-    gap: 100px;
-
-}
-
-
-
-
-.brand-info {
-    max-width: 350px;
-}
-
-/* .logo {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-} */
-
-
-.logo-image {
-    width: 100px;
-    height: 100px;
-    /* border-radius: 50%;  */
-    /* margin-bottom: 10px; 
-    object-fit: cover;
-    max-width: 100%; */
-    aspect-ratio: 1 / 1;
-
-}
-
-.company-name {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 0;
-}
-
-
-/* .tagline {
-    color: var(--accent-color);
-    font-size: 10px;
-    margin-top: 4px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-}  */
-
-.description {
-    font-size: 12px;
-    margin-top: 30px;
-    line-height: 1.6;
-    color: var(--white);
-}
-
-/* --- Contact --- */
-h4 {
-    /* color: var(--text-light); */
-    margin-bottom: 20px;
-    font-size: 16px;
-    font-family: var(--font-base);
-    color: var(--white);
-}
-
-.contact-section p,
-.links-section li {
-    font-size: 12px;
-    /* color: var(--text-faded); */
-    margin: 10px 0;
-    line-height: 1.4;
-    color: var(--white);
-}
-
-.links-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.links-section a {
-    color: inherit;
-    text-decoration: none;
-}
-
-
-.footer-bottom {
-    text-align: center;
-    margin-top: 50px;
-
-}
-
-.footer-bottom hr {
-    border: none;
-    /* border-top: 1px solid var(--text-faded); */
-    border: 0.3px solid var(--white);
-    border-bottom: none;
-
-    margin-bottom: 20px;
-
-}
-
-.footer-bottom p {
-    font-size: 12px;
-
-
-    color: var(--white);
-}
-
-
-@media (max-width: 768px) {
-
-    .container {
-
-        grid-template-columns: 1fr;
-        gap: 10px;
-        padding: 10px 5%;
-
+@media (max-width: 600px) {
+    .readyToTransform h2 {
+        font-size: 28px;
     }
-
-
-    .footer-container {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        padding: 40px 5%;
-    }
-
-    footer {
-        padding: 40px 5% 30px;
-    }
-
 }
