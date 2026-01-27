@@ -9,14 +9,31 @@
 .booking-page {
   background: var(--liblue);
   min-height: 100vh;
+  font-family: "Inter", var(--font-base);
+}
+
+/* "Search avalibility" detta är bara till så det ligger bakom */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /*=========================================
        Header for all pages
 ===========================================*/
 .site-header {
-    background: var(--white);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  height: 147px;
+  background: var(--white);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center; /* vertikal centrering */
 }
 
 .nav {
@@ -30,7 +47,7 @@
 
 .nav.wrapper {
     margin: 0 auto;
-    height: 147px;
+    height: auto;
 }
 
 .nav-logo img {
@@ -76,6 +93,7 @@
     white-space: nowrap;
     justify-self: center;
 }
+
 /*Started here//F*/
 .hamburger {
     display: none;
@@ -136,25 +154,26 @@
 
 /* ========== HERO ========== */
 .booking-hero {
-  padding: 32px 0 14px;
+  padding: 46px 0 18px;
   text-align: center;
 }
 
-.booking-hero h1 {
+.booking-hero__inner h1 {
   margin: 0;
   font-weight: 400;
   line-height: 1;
+  font-size: 96px;
 }
 
-.booking-hero p {
-  margin: 10px 0 0;
-  font-size: 36px;
+.booking-hero__inner p {
+  margin: 14px 0 0;
+  font-size: 32px;
   font-weight: 400;
 }
 
 /* ========== SEARCH CARDET ========== */
 .booking-search {
-  padding: 10px 0 20px;
+  padding: 10px 0 28px;
 }
 
 .booking-form {
@@ -162,9 +181,9 @@
   border-radius: 14px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
   padding: 18px;
-
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  /* 4 width with the same and 1 for the button */
+  grid-template-columns: repeat(4, minmax(0, 1fr)) clamp(220px, 20vw, 273px);
   gap: 14px;
   align-items: end;
 }
@@ -172,12 +191,12 @@
 .field {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
 }
 
 .field-label {
-  font-weight: 600;
-  font-size: 24px;
+  font-weight: 700;
+  font-size: 20px;
 }
 
 .date-input,
@@ -190,14 +209,24 @@
   font-weight: 600;
 }
 
+/* booking button*/
 .btn-book {
-  height: 44px;
+  height: 65px;
   border: none;
   border-radius: 10px;
   background: var(--green);
   color: var(--white);
-  font-weight: 700;
+  font-weight: 800;
   cursor: pointer;
+}
+
+/* Error message if you dont have all fields filled */
+.form-error {
+  grid-column: 1 / -1;
+  margin: 0;  
+  font-size: 14px;
+  font-weight: 600;
+  color: #b00020;
 }
 
 /* ========== RESULTS ========== */
@@ -208,14 +237,13 @@
 .results-header h2 {
   margin: 0;
   font-weight: 400;
-  font-size: 48px;
+  font-size: 56px;
 }
 
 .results-header p {
-  margin: 6px 0 16px;
-  font-size: 32px;
+  margin: 8px 0 18px;
+  font-size: 28px;
   font-weight: 400;
-  
 }
 
 /* ========== ROOM CARDS ========== */
@@ -225,9 +253,9 @@
   border-radius: 14px;
   box-shadow: 0 10px 18px rgba(0, 0, 0, 0.12);
   overflow: hidden;
-
   display: grid;
-  grid-template-columns: 42% 58%;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
   margin-bottom: 18px;
 }
 
@@ -262,7 +290,9 @@
 }
 
 .room-rating .star {
-  color: #f59e0b;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .room-info {
@@ -282,14 +312,13 @@
 .room-head h3 {
   margin: 0;
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .room-sub {
-  margin: 4px 0 0;
+  margin: 6px 0 0;
   font-size: 14px;
   color: rgba(0, 0, 0, 0.65);
-
   display: flex;
   align-items: center;
   gap: 8px;
@@ -307,6 +336,7 @@
   color: var(--green);
   font-weight: 800;
   text-align: right;
+  font-size: 20px;
 }
 
 .room-price span {
@@ -345,6 +375,9 @@
 }
 
 .tags {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -390,10 +423,8 @@ footer {
 
 .footer-container {
     display: grid;
-
     grid-template-columns: 1fr auto auto;
     gap: 100px;
-
 }
 
 .brand-info {
@@ -407,7 +438,6 @@ footer {
     margin-bottom: 10px;
 } */
 
-
 .logo-image {
     width: 100px;
     height: 100px;
@@ -416,7 +446,6 @@ footer {
     object-fit: cover;
     max-width: 100%; */
     aspect-ratio: 1 / 1;
-
 }
 
 .company-name {
@@ -468,11 +497,9 @@ h4 {
     text-decoration: none;
 }
 
-
 .footer-bottom {
     text-align: center;
     margin-top: 50px;
-
 }
 
 .footer-bottom hr {
@@ -480,28 +507,20 @@ h4 {
     /* border-top: 1px solid var(--text-faded); */
     border: 0.3px solid var(--white);
     border-bottom: none;
-
     margin-bottom: 20px;
-
 }
 
 .footer-bottom p {
     font-size: 12px;
-
-
     color: var(--white);
 }
 
 @media (max-width: 768px) {
-
     .container {
-
         grid-template-columns: 1fr;
         gap: 10px;
         padding: 10px 5%;
-
     }
-
 
     .footer-container {
         grid-template-columns: 1fr;
@@ -520,6 +539,10 @@ h4 {
   .booking-form {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .btn-book {
+    grid-column: 1 / -1;
+  }
 }
 
 @media (max-width: 576px) {
@@ -527,11 +550,11 @@ h4 {
     padding: 18px 0 10px;
   }
 
-  .booking-hero h1 {
-    font-size: 42px;
+  .booking-hero__inner h1 {
+    font-size: 48px;
   }
 
-  .booking-hero p {
+  .booking-hero__inner p {
     font-size: 18px;
   }
 
@@ -555,17 +578,13 @@ h4 {
     font-size: 16px;
     padding: 12px 16px;
   }
+    /* for mobile to make room cards stack properly */
+  .room-card--reverse .room-media { order: 0; }
+  .room-card--reverse .room-info  { order: 0; }
 }
 
 /* Booking page JavaScript (results hidden first + simple error text) */
 .search-results {
-  display: none;
+  display: grid;
   gap: 18px;
-}
-
-.form-error {
-  margin: 8px 0 0;
-  font-size: 14px;
-  font-weight: 600;
-  color: #b00020;
 }

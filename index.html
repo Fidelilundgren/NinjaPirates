@@ -46,125 +46,148 @@
     </div>
 </section>
 
-    <!-- Check in/ check out on page 1-->
-        <section class="bookingSearch">
-        <div class="wrapper">
-            <form class="bookingForm" action="booking.html" method="get">
+<!-- Check in/ check out on page 1 -->
+<section class="bookingSearch">
+    <div class="wrapper">
+        <form class="bookingForm" action="booking.html" method="get">
 
-    <!-- Started to work on this page 13/01-26 so you can't check in before -->
-                <article class="formItemFlex">
-                <label class="defaultFont" for="checkIn">Check In</label>
-                <input class="defaultFont" type="date" id="checkIn" 
-                name="checkIn" min="2026-01-13">
-                </article>
+<!-- Updated the work on this page 27/01-26 so you can't "check in" before -->
+            <label class="bookingLabel defaultFont" for="checkIn">
+                Check In:
+                <input type="date" class="bookingInput defaultFont" id="checkIn" name="checkIn" min="2026-01-27">
+            </label>
 
-    <!-- Started to work on this page 13/01-26 so you can't check out before 14/01-26 -->
-                <article class="formItemFlex">
-                <label class="defaultFont" for="checkOut">Check Out</label>
-                <input class="defaultFont" type="date" id="checkOut" 
-                name="checkOut" min="2026-01-14">
-                </article>
+<!-- Updated the work on this page 27/01-26 so you can't "check out" before 28/01-26 -->
+            <label class="bookingLabel defaultFont" for="checkOut">
+                Check Out:
+                <input type="date" class="bookingInput defaultFont" id="checkOut" name="checkOut" min="2026-01-28">
+            </label>
 
-                <article class="formItemFlex">
-                <select class="defaultFont">
-                    <option value="">Guests</option>
-                    <option value="1">1 Guests</option>
+            <label class="bookingLabel defaultFont" for="guests">
+                Guests:
+                <select class="bookingInput defaultFont" id="guests" name="guests">
+                    <option value="" disabled selected>select</option>
+                    <option value="1">1 Guest</option>
                     <option value="2">2 Guests</option>
                     <option value="3">3 Guests</option>
                     <option value="4">4 Guests</option>
-                </select> </article>
+                </select>
+            </label>
 
-                <button class="defaultFont" type="submit">Check Availability</button>
-            </form>
-        </div>
-    </section>
+            <button class="bookingButton defaultFont" type="submit">Check Availability</button>
+
+        </form>
+    </div>
+</section>
+
     <!-- Our vision on page one-->
     <section class="vision" id="vision">
         <div class="wrapper">
-            <h2>Our vision</h2>
-            <p>Bonz.ai reimagines the hotel experience by harmonizing cutting-edge artificial 
+            <h2 class="defaultFontCards">Our vision</h2>
+            <p class="vision-p">
+                Bonz.ai reimagines the hotel experience by harmonizing cutting-edge artificial 
                 intelligence with unwavering environmental stewardship. We believe the future 
-                of travel is both smart and sustainable.</p>
+                of travel is both smart and sustainable.
+            </p>
     <div class="cards-grid">
         <article class="card">
             <div class="icon">
             <img src="assets/assets/logo/brain.svg" alt="Brain icon" class="card-icon">
             </div>
-            <h3>AI-Powered Experience</h3>
-            <p>Personalized room settings, smart recommendations,
-                and seamless service through advanced AI technology.</p>
+            <h3 class="defaultFontCards">AI-Powered Experience</h3>
+            <p class="defaultFontCards v-cards-p">
+                Personalized room settings, smart recommendations,
+                and seamless service through advanced AI technology.
+            </p>
         </article>
         <article class="card">
             <div class="icon">
             <img src="assets/assets/logo/leaf.svg" alt="Leaf icon" class="card-icon">
             </div>
-            <h3>100% Sustainable</h3>
-            <p>Carbon-neutral operations,
+            <h3 class="defaultFontCards">100% Sustainable</h3>
+            <p class="defaultFontCards v-cards-p">
+                Carbon-neutral operations,
                 renewable energy, and eco-friendly materials
-                throughout the property.</p>
+                throughout the property.
+            </p>
         </article>
         <article class="card">
             <div class="icon">
             <img src="assets/assets/logo/sparkles.svg" alt="Sparkle icon" class="card-icon">
             </div>
-            <h3>Luxury Redefined</h3>
-            <p>Premium comfort meets environmental responsibility
-                without compromise on quality or experience.</p>
+            <h3 class="defaultFontCards">Luxury Redefined</h3>
+            <p class="defaultFontCards v-cards-p">
+                Premium comfort meets environmental responsibility
+                without compromise on quality or experience.
+            </p>
         </article>
         <article class="card">
             <div class="icon">
             <img src="assets/assets/logo/zap.svg" alt="Zap icon" class="card-icon">
             </div>
-            <h3>Smart Everything</h3>
-            <p>Voice-controlled rooms, automated climate control,
-                and intelligent lighting that adapts to you.</p>
+            <h3 class="defaultFontCards">Smart Everything</h3>
+            <p class="defaultFontCards v-cards-p">
+                Voice-controlled rooms, automated climate control,
+                and intelligent lighting that adapts to you.
+            </p>
         </article>
     </div>
     </div>
     </section>
+
 <!-- Sustainability on page one-->
 <section class="sustain" id="sustain">
     <div class="wrapper">
-        <h2>Sustainablility by the Numbers</h2>
-        <p>Our commitment to the planet, measured and verified</p>
+        <h2 class="defaultFontCards">Sustainablility by the Numbers</h2>
+        <p class="defaultFontCards sustain-p">
+            Our commitment to the planet, measured and verified
+        </p>
         <div class="s-cards-grid">
             <article class="s-card">
                 <div class="s-icon">
                     <img src="assets/assets/logo/droplet.svg" alt="Water drop icon" class="s-card-icon">
                 </div>
-                <h3>50% Less</h3>
-                <h4>Water Conservation</h4>
-                <p>Advanced water recycling and smart usage monitoring</p>
+                <h3 class="defaultFontCards">50% Less</h3>
+                <h4 class="defaultFontCards">Water Conservation</h4>
+                <p class="defaultFontCards s-cards-text">
+                    Advanced water recycling and smart usage monitoring
+                </p>
             </article>
             <article class="s-card">
                 <div class="s-icon">
                     <img src="assets/assets/logo/battery.svg" alt="Battery icon" class="s-card-icon">
                 </div>
-                <h3>100%</h3>
-                <h4>Solar Powered</h4>
-                <p>All energy sourced from renewable solar panels</p>
+                <h3 class="defaultFontCards">100%</h3>
+                <h4 class="defaultFontCards">Solar Powered</h4>
+                <p class="defaultFontCards s-cards-text">
+                    All energy sourced from renewable solar panels
+                </p>
             </article>
             <article class="s-card">
                 <div class="s-icon">
                     <img src="assets/assets/logo/wind.svg" alt="Wind icon" class="s-card-icon">
                 </div>
-                <h3>99.9%</h3>
-                <h4>Clean Air</h4>
-                <p>HEPA filtration and natural ventilation systems</p>
+                <h3 class="defaultFontCards">99.9%</h3>
+                <h4 class="defaultFontCards">Clean Air</h4>
+                <p class="defaultFontCards s-cards-text">
+                    HEPA filtration and natural ventilation systems
+                </p>
             </article>
             <article class="s-card">
                 <div class="s-icon">
                     <img src="assets/assets/logo/recycle.svg" alt="Recycle icon" class="s-card-icon">
                 </div>
-                <h3>95%</h3>
-                <h4>Zero Waste</h4>
-                <p>Comprehensive recycling and composting programs</p>
+                <h3 class="defaultFontCards">95%</h3>
+                <h4 class="defaultFontCards">Zero Waste</h4>
+                <p class="defaultFontCards s-cards-text">
+                    Comprehensive recycling and composting programs
+                </p>
             </article>
         </div>
     </div>
 </section>
 
-<section class="aiStay">
+<section class="aiStay" id="aiStay">
     <div class="wrapper">
         <article class="stay-card">
             <h2 class="defaultFontLight">Your AI-Enhanced Stay</h2>
@@ -200,66 +223,16 @@
 <!-- Ready to Transform on page one-->
     <section class="readyToTransform">
         <div class="wrapper">
-            <h2>Ready to Transform Your Stay?</h2>
-            <p>Join us in creating a sustainable future without sacrificing luxury or comfort. 
-            <span>Your perfect stay awaits.</span>
-        </p>
-            <button class="ready">Book Now</button>
+            <h2 class="defaultFontCards">
+                Ready to Transform Your Stay?
+            </h2>
+                <p class="ready-text defaultFontCards">
+                    Join us in creating a sustainable future without sacrificing luxury or comfort. 
+                </p>
+                <p class="ready-text defaultFontCards">
+                    Your perfect stay awaits.
+                </p>
+        
+            <button class="ready defaultFont">Book Now</button>
         </div>
     </section>
-
-    <!-- Tillfällig footer för alla sidor-->
-    
-    <footer>
-    
-    
-        <div class="wrapper">
-            <div class="footer-container">
-    
-                <div class="logo-section">
-    
-                    <div class="logo">
-    
-                        <img src="assets\assets\logo\bonz.ai-logo-color-portrait-full.png" alt="Bonz.ai Logo"
-                            class="logo-image">
-    
-                    </div>
-    
-                    <p class="description">The hotel of the future, where sustainability meets smart technology.
-                        Experience
-                        AI-driven hospitality with an eco-conscious heart.</p>
-                </div>
-    
-                <div class="contact-section">
-    
-                    <h4>Contact</h4>
-                    <p>123 Green Street, Eco City, EC 12345</p>
-                    <p>+1 (555) 123-4567</p>
-                    <p>hello@bonz.ai</p>
-                </div>
-                <div class="links-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Sustainability Report</a></li>
-                        <li><a href="#">Careers</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <hr>
-                <p>© 2025 Bonz.ai. All rights reserved. Building a sustainable future, one stay at a time.</p>
-            </div>
-    
-        </div>
-        </div>
-    
-    
-        </div>
-        </div>
-    
-    </footer>
-
-</body>
-</html>
