@@ -34,63 +34,63 @@
 
   <main>
     <section class="booking-hero">
-      <div class="wrapper">
+      <header class="wrapper booking-hero__inner">
         <h1>Book Your Stay</h1>
         <p>Discover sustainable luxury powered by AI</p>
-      </div>
+      </header>
     </section>
 
-    <section class="booking-search">
-      <div class="wrapper">
-        <form class="booking-form" id="booking-form" action="#" method="get">
-          <label class="field">
-            <span class="field-label">Check-in</span>
-            <input class="date-input" type="date" id="check-in" name="checkin" />
-          </label>
+    <section class="booking-search" aria-labelledby="booking-search-title">
+      <h2 id="booking-search-title" class="sr-only">Search availability</h2>
 
-          <label class="field">
-            <span class="field-label">Check-out</span>
-            <input class="date-input" type="date" id="check-out" name="checkout" />
-          </label>
+      <form class="booking-form wrapper" id="booking-form" action="#" method="get" novalidate>
+        <label class="field">
+          <span class="field-label">Check-in</span>
+          <input class="date-input" type="date" id="check-in" name="checkin" />
+        </label>
 
-          <label class="field">
-            <span class="field-label">Guests</span>
-            <select name="guests" id="guests" class="select">
-              <option value="">Select</option>
-              <option value="1">1 Guest</option>
-              <option value="2">2 Guests</option> <!-- 2 guest is selected as default -->
-              <option value="3">3 Guests</option>
-              <option value="4">4 Guests</option>
-            </select>
-          </label>
+        <label class="field">
+          <span class="field-label">Check-out</span>
+          <input class="date-input" type="date" id="check-out" name="checkout" />
+        </label>
 
-          <label class="field">
-            <span class="field-label">Room Type</span>
-            <select name="roomType" class="select">
-              <option value="all" selected>All Rooms</option>
-              <option value="standard">Standard</option>
-              <option value="deluxe">Deluxe</option>
-              <option value="suite">Suite</option>
-            </select>
-          </label>
+        <label class="field">
+          <span class="field-label">Guests</span>
+          <select name="guests" id="guests" class="select">
+            <option value="">Select</option>
+            <option value="1">1 Guest</option>
+            <option value="2" selected>2 Guests</option> <!-- 2 guest is selected as default -->
+            <option value="3">3 Guests</option>
+            <option value="4">4 Guests</option>
+          </select>
+        </label>
 
-          <p id="booking-error" class="form-error"></p>
+        <label class="field">
+          <span class="field-label">Room Type</span>
+          <select name="roomType" class="select">
+            <option value="all" selected>All Rooms</option>
+            <option value="standard">Standard</option>
+            <option value="deluxe">Deluxe</option>
+            <option value="suite">Suite</option>
+          </select>
+        </label>
 
-          <button class="btn-book" type="submit">
-            Book now
-          </button>
-        </form>
-      </div>
+        <button class="btn-book" type="submit">
+          Book now
+        </button>
+
+        <p id="booking-error" class="form-error" aria-live="polite"></p>
+      </form>
     </section>
 
     <section class="booking-results">
-      <div class="wrapper">
+      <section class="wrapper">
         <header class="results-header">
           <h2>6 Rooms Available</h2>
           <p>Select dates to see availability</p>
         </header>
 
-        <div id="search-results" class="search-results">
+        <section id="search-results" class="search-results">
 
         <!-- Room card 1 (i used this and copied it to the other 5)-->
         <article class="room-card">
@@ -100,55 +100,55 @@
               <img src="assets/assets/icons/star.png" alt="star" /></span> 4.9</figcaption>
           </figure>
 
-          <div class="room-info">
+          <section class="room-info">
             <header class="room-head">
-              <div>
+              <section class="room-meta">
                 <h3>EcoSmart Suite</h3>
                 <p class="room-sub">
                   <img src="assets/assets/icons/users-round.png" alt="" class="inline-icon" aria-hidden="true" />
                   Up to 2 · 45 m²
                 </p>
-              </div>
+              </section>
               <p class="room-price">$299 <span>per night</span></p>
             </header>
 
-            <div class="room-block">
+            <section class="room-block">
               <p class="block-title">
                 <img src="assets/assets/icons/wifi.png" alt="" class="block-icon" aria-hidden="true" />
                 Features
               </p>
-              <div class="tags">
-                <span class="tag">King size bed</span>
-                <span class="tag">Ocean View</span>
-                <span class="tag">Smart climate</span>
-                <span class="tag">Premium Toiletries</span>
-              </div>
-            </div>
+              <ul class="tags" aria-label="Room features">
+                <li class="tag">King size bed</li>
+                <li class="tag">Ocean View</li>
+                <li class="tag">Smart climate</li>
+                <li class="tag">Premium Toiletries</li>
+              </ul>
+            </section>
 
-            <div class="room-block">
+            <section class="room-block">
               <p class="block-title">
                 <img src="assets/assets/icons/brain.png" alt="" class="block-icon" aria-hidden="true" />
                 AI Features
               </p>
-              <div class="tags tags-ai">
-                <span class="tag">Voice Control</span>
-                <span class="tag">Smart Lighting</span>
-                <span class="tag">Digital Concierge</span>
-              </div>
-            </div>
+              <ul class="tags tags-ai" aria-label="AI features">
+                <li class="tag">Voice Control</li>
+                <li class="tag">Smart Lighting</li>
+                <li class="tag">Digital Concierge</li>
+              </ul>
+            </section>
 
-            <div class="room-block">
+            <section class="room-block">
               <p class="block-title">
                 <img src="assets/assets/icons/leaf.png" alt="" class="block-icon" aria-hidden="true" />
                 Sustainability
               </p>
               <p class="room-text">100% renewable energy, recycled materials</p>
-            </div>
+            </section>
 
             <button class="btn-reserve" type="button" aria-disabled="true">
               Reserve Room
             </button>
-          </div>
+          </section>
         </article>
 
         <!-- Room card 2 (copied room card1 and reverse) -->
@@ -159,55 +159,55 @@
               <img src="assets/assets/icons/star.png" alt="star" /></span> 4.7</figcaption>
           </figure>
 
-          <div class="room-info">
+          <section class="room-info">
             <header class="room-head">
-              <div>
+              <section class="room-meta">
                 <h3>GreenTech Deluxe</h3>
                 <p class="room-sub">
                   <img src="assets/assets/icons/users-round.png" alt="" class="inline-icon" aria-hidden="true" />
                   Up to 2 · 35 m²
                 </p>
-              </div>
+              </section>
               <p class="room-price">$199 <span>per night</span></p>
             </header>
 
-            <div class="room-block">
+            <section class="room-block">
               <p class="block-title">
                 <img src="assets/assets/icons/wifi.png" alt="" class="block-icon" aria-hidden="true" />
                 Features
               </p>
-              <div class="tags">
-                <span class="tag">Queen size bed</span>
-                <span class="tag">City View</span>
-                <span class="tag">Smart TV</span>
-                <span class="tag">Premium Toiletries</span>
-              </div>
-            </div>
+              <ul class="tags" aria-label="Room features">
+                <li class="tag">Queen size bed</li>
+                <li class="tag">City View</li>
+                <li class="tag">Smart TV</li>
+                <li class="tag">Premium Toiletries</li>
+              </ul>
+            </section>
 
-            <div class="room-block">
+            <section class="room-block">
               <p class="block-title">
                 <img src="assets/assets/icons/brain.png" alt="" class="block-icon" aria-hidden="true" />
                 AI Features
               </p>
-              <div class="tags tags-ai">
-                <span class="tag">Voice Control</span>
-                <span class="tag">Smart Lighting</span>
-                <span class="tag">Predictive Climate</span>
-              </div>
-            </div>
+              <ul class="tags tags-ai" aria-label="AI features">
+                <li class="tag">Voice Control</li>
+                <li class="tag">Smart Lighting</li>
+                <li class="tag">Predictive Climate</li>
+              </ul>
+            </section>
 
-            <div class="room-block">
+            <section class="room-block">
               <p class="block-title">
                 <img src="assets/assets/icons/leaf.png" alt="" class="block-icon" aria-hidden="true" />
                 Sustainability
               </p>
               <p class="room-text">Solar powered, low-flow water systems</p>
-            </div>
+            </section>
 
             <button class="btn-reserve" type="button" aria-disabled="true">
               Reserve Room
             </button>
-          </div>
+          </section>
         </article>
 
         <!-- Room card 3 (copied room card 1) -->
@@ -218,53 +218,53 @@
             </span> 4.2</figcaption>
           </figure>
 
-          <div class="room-info">
+          <section class="room-info">
             <header class="room-head">
-              <div>
+              <section class="room-meta">
                 <h3>Sustainable Studio</h3>
                 <p class="room-sub">
                   <img src="assets/assets/icons/users-round.png" alt="" class="inline-icon" aria-hidden="true" />
                   Up to 2 · 25 m²
                 </p>
-              </div>
+              </section>
               <p class="room-price">$149 <span>per night</span></p>
             </header>
 
-            <div class="room-block">
+            <section class="room-block">
               <p class="block-title">
                 <img src="assets/assets/icons/wifi.png" alt="" class="block-icon" aria-hidden="true" />
                 Features
               </p>
-              <div class="tags">
-                <span class="tag">Double Bed</span>
-                <span class="tag">Garden View</span>
-                <span class="tag">Eco-Friendly Bath</span>
-              </div>
-            </div>
+              <ul class="tags" aria-label="Room features">
+                <li class="tag">Double Bed</li>
+                <li class="tag">Garden View</li>
+                <li class="tag">Eco-Friendly Bath</li>
+              </ul>
+            </section>
 
-            <div class="room-block">
+            <section class="room-block">
               <p class="block-title">
                 <img src="assets/assets/icons/brain.png" alt="" class="block-icon" aria-hidden="true" />
                 AI Features
               </p>
-              <div class="tags tags-ai">
-                <span class="tag">Smart Lighting</span>
-                <span class="tag">Digital Concierge</span>
-              </div>
-            </div>
+              <ul class="tags tags-ai" aria-label="AI features">
+                <li class="tag">Smart Lighting</li>
+                <li class="tag">Digital Concierge</li>
+              </ul>
+            </section>
 
-            <div class="room-block">
+            <section class="room-block">
               <p class="block-title">
                 <img src="assets/assets/icons/leaf.png" alt="" class="block-icon" aria-hidden="true" />
                 Sustainability
               </p>
               <p class="room-text">Bamboo furniture, organic linens</p>
-            </div>
+            </section>
 
             <button class="btn-reserve" type="button" aria-disabled="true">
               Reserve Room
             </button>
-          </div>
+          </section>
         </article>
 
         <!-- Room card 4 (copied room card 2) -->
@@ -275,53 +275,53 @@
               <img src="assets/assets/icons/star.png" alt="star" /></span> 4.6</figcaption>
           </figure>
 
-          <div class="room-info">
+          <section class="room-info">
             <header class="room-head">
-              <div>
+              <section class="room-meta">
                 <h3>Nature’s Haven</h3>
                 <p class="room-sub">
                   <img src="assets/assets/icons/users-round.png" alt="" class="inline-icon" aria-hidden="true" />
                   Up to 2 · 40 m²
                 </p>
-              </div>
+              </section>
               <p class="room-price">$229 <span>per night</span></p>
             </header>
 
-            <div class="room-block">
+            <section class="room-block">
               <p class="block-title">
                 <img src="assets/assets/icons/wifi.png" alt="" class="block-icon" aria-hidden="true" />
                 Features
               </p>
-              <div class="tags">
-                <span class="tag">King Bed</span>
-                <span class="tag">Forest View</span>
-                <span class="tag">Spa Access</span>
-              </div>
-            </div>
+              <ul class="tags" aria-label="Room features">
+                <li class="tag">King Bed</li>
+                <li class="tag">Forest View</li>
+                <li class="tag">Spa Access</li>
+              </ul>
+            </section>
 
-            <div class="room-block">
+            <section class="room-block">
               <p class="block-title">
                 <img src="assets/assets/icons/brain.png" alt="" class="block-icon" aria-hidden="true" />
                 AI Features
               </p>
-              <div class="tags tags-ai">
-                <span class="tag">AI Soundscape</span>
-                <span class="tag">Smart Climate</span>
-              </div>
-            </div>
+              <ul class="tags tags-ai" aria-label="AI features">
+                <li class="tag">AI Soundscape</li>
+                <li class="tag">Smart Climate</li>
+              </ul>
+            </section>
 
-            <div class="room-block">
+            <section class="room-block">
               <p class="block-title">
                 <img src="assets/assets/icons/leaf.png" alt="" class="block-icon" aria-hidden="true" />
                 Sustainability
               </p>
               <p class="room-text">Recycled wood, green energy program</p>
-            </div>
+            </section>
 
             <button class="btn-reserve" type="button" aria-disabled="true">
               Reserve Room
             </button>
-          </div>
+          </section>
         </article>
 
         <!-- Room card 5 (copied room card 1) -->
@@ -332,54 +332,54 @@
             </span> 4.4</figcaption>
           </figure>
 
-          <div class="room-info">
+          <section class="room-info">
             <header class="room-head">
-              <div>
+              <section class="room-meta">
                 <h3>Urban EcoLoft</h3>
                 <p class="room-sub">
                   <img src="assets/assets/icons/users-round.png" alt="" class="inline-icon" aria-hidden="true" />
                   Up to 2 · 30 m²
                 </p>
-              </div>
+              </section>
               <p class="room-price">$179 <span>per night</span></p>
             </header>
 
-            <div class="room-block">
+            <section class="room-block">
               <p class="block-title">
                 <img src="assets/assets/icons/wifi.png" alt="" class="block-icon" aria-hidden="true" />
                 Features
               </p>
-              <div class="tags">
-                <span class="tag">Queen Bed</span>
-                <span class="tag">City View</span>
-                <span class="tag">Smart Desk</span>
-                <span class="tag">Fast Wi-Fi</span>
-              </div>
-            </div>
+              <ul class="tags" aria-label="Room features">
+                <li class="tag">Queen Bed</li>
+                <li class="tag">City View</li>
+                <li class="tag">Smart Desk</li>
+                <li class="tag">Fast Wi-Fi</li>
+              </ul>
+            </section>
 
-            <div class="room-block">
+            <section class="room-block">
               <p class="block-title">
                 <img src="assets/assets/icons/brain.png" alt="" class="block-icon" aria-hidden="true" />
                 AI Features
               </p>
-              <div class="tags tags-ai">
-                <span class="tag">AI Work Mode</span>
-                <span class="tag">Smart Lighting</span>
-              </div>
-            </div>
+              <ul class="tags tags-ai" aria-label="AI features">
+                <li class="tag">AI Work Mode</li>
+                <li class="tag">Smart Lighting</li>
+              </ul>
+            </section>
 
-            <div class="room-block">
+            <section class="room-block">
               <p class="block-title">
                 <img src="assets/assets/icons/leaf.png" alt="" class="block-icon" aria-hidden="true" />
                 Sustainability
               </p>
               <p class="room-text">Low-energy lighting, recycled textiles</p>
-            </div>
+            </section>
 
             <button class="btn-reserve" type="button" aria-disabled="true">
               Reserve Room
             </button>
-          </div>
+          </section>
         </article>
 
         <!-- Room card 6 (copied room card 2) -->
@@ -390,91 +390,85 @@
             <img src="assets/assets/icons/star.png" alt="star" /></span> 4.8</figcaption>
           </figure>
 
-          <div class="room-info">
+          <section class="room-info">
             <header class="room-head">
-              <div>
+              <section class="room-meta">
                 <h3>AI Presidential Suite</h3>
                 <p class="room-sub">
                   <img src="assets/assets/icons/users-round.png" alt="" class="inline-icon" aria-hidden="true" />
                   Up to 4 · 70 m²
                 </p>
-              </div>
+              </section>
               <p class="room-price">$499 <span>per night</span></p>
             </header>
 
-            <div class="room-block">
+            <section class="room-block">
               <p class="block-title">
                 <img src="assets/assets/icons/wifi.png" alt="" class="block-icon" aria-hidden="true" />
                 Features
               </p>
-              <div class="tags">
-                <span class="tag">2 Beds</span>
-                <span class="tag">Top Floor</span>
-                <span class="tag">Private Lounge</span>
-                <span class="tag">Premium Tech</span>
-              </div>
-            </div>
+              <ul class="tags" aria-label="Room features">
+                <li class="tag">2 Beds</li>
+                <li class="tag">Top Floor</li>
+                <li class="tag">Private Lounge</li>
+                <li class="tag">Premium Tech</li>
+              </ul>
+            </section>
 
-            <div class="room-block">
+            <section class="room-block">
               <p class="block-title">
                 <img src="assets/assets/icons/brain.png" alt="" class="block-icon" aria-hidden="true" />
                 AI Features
               </p>
-              <div class="tags tags-ai">
-                <span class="tag">AI Butler</span>
-                <span class="tag">Digital Concierge</span>
-                <span class="tag">Predictive Climate</span>
-              </div>
-            </div>
+              <ul class="tags tags-ai" aria-label="AI features">
+                <li class="tag">AI Butler</li>
+                <li class="tag">Digital Concierge</li>
+                <li class="tag">Predictive Climate</li>
+              </ul>
+            </section>
 
-            <div class="room-block">
+            <section class="room-block">
               <p class="block-title">
                 <img src="assets/assets/icons/leaf.png" alt="" class="block-icon" aria-hidden="true" />
                 Sustainability
               </p>
               <p class="room-text">Energy optimization, eco materials</p>
-            </div>
+            </section>
 
             <button class="btn-reserve" type="button" aria-disabled="true">
               Reserve Room
             </button>
-          </div>
+          </section>
         </article>
 
-        </div>
-
-      </div>
+        </section>
+      </section>
     </section>
   </main>
 
    <footer>
-    
-    
-        <div class="wrapper">
-            <div class="footer-container">
-    
-                <div class="logo-section">
-    
-                    <div class="logo">
-    
+        <section class="wrapper">
+            <section class="footer-container">
+
+                <section class="logo-section">
+                    <figure class="logo">
                         <img src="assets\assets\logo\bonz.ai-logo-color-portrait-full.png" alt="Bonz.ai Logo"
                             class="logo-image">
-    
-                    </div>
-    
+                    </figure>
+
                     <p class="description">The hotel of the future, where sustainability meets smart technology.
                         Experience
                         AI-driven hospitality with an eco-conscious heart.</p>
-                </div>
-    
-                <div class="contact-section">
-    
+                </section>
+
+                <section class="contact-section">
                     <h4>Contact</h4>
                     <p>123 Green Street, Eco City, EC 12345</p>
                     <p>+1 (555) 123-4567</p>
                     <p>hello@bonz.ai</p>
-                </div>
-                <div class="links-section">
+                </section>
+
+                <nav class="links-section" aria-label="Quick links">
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="#">Privacy Policy</a></li>
@@ -482,16 +476,16 @@
                         <li><a href="#">Sustainability Report</a></li>
                         <li><a href="#">Careers</a></li>
                     </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
+                </nav>
+
+            </section>
+
+            <section class="footer-bottom">
                 <hr>
                 <p>© 2025 Bonz.ai. All rights reserved. Building a sustainable future, one stay at a time.</p>
-            </div>
-    
-        </div>
-        
-    
+            </section>
+
+        </section>
     </footer>
 </body>
 </html>
