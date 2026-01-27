@@ -37,3 +37,28 @@ if (bookingForm) {
         }
     });
 }
+
+
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+
+    // Hämta värden 
+    const fn = document.getElementById('firstName').value;
+    const em = document.getElementById('email').value;
+    const ph = document.getElementById('phone').value;
+
+    
+    const output = document.getElementById('formResponse');
+
+    if (output) {
+        output.innerHTML = `<strong>Thank you ${fn}!</strong><br>We have received your email (${em}) and will call you on ${ph}.`;
+        output.style.color = "#009966";
+        // console.log("Data utskriven", {fn, em, ph});
+    }
+         this.reset();  // Rensar värdet i kontakta oss
+});
+
+
+
+
