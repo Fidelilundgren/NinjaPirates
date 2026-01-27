@@ -195,7 +195,7 @@ Hero section on landing page
 }
 
 /*=========================================
-Check in/check out on landing page
+ Check in/check out on landing page
 ===========================================*/
 
 /*Background with ombre*/
@@ -205,12 +205,11 @@ Check in/check out on landing page
 } 
 
 .bookingForm {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 240px));
     gap: 22px;
+    justify-content: center;
+    width: 100%;
 }
 
 /*All fonts having the same design*/
@@ -220,36 +219,31 @@ Check in/check out on landing page
     font-weight: 600;
 }
 
-.formItemFlex {
+.bookingLabel {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     border: 1px solid var(--grey);
     border-radius: 15px;
     background: var(--white);
-    padding: 16px 12px 16px 12px;
-    width: 230px;
+    padding: 16px 12px;
     height: 90px;
+    width: 240px;
+    cursor: pointer;
 }
 
-.bookingForm label{
-    justify-content: center;
-    text-align: center;
-}
-
-select {
-    background-color: transparent;
+.bookingInput {
+    width: 100%;
     border: 0;
-    justify-content: center;
+    background: transparent;
+    font: inherit;
     text-align: center;
-    padding-top: 15px;
+    padding: 0 8px;
 }
 
-.bookingForm input {
-    background-color: transparent;
-    border: 1px;
-}
-
-button {
+.bookingButton {
     padding: 16px 12px 16px 12px;
     border: 0;
     background: var(--black);
@@ -257,31 +251,73 @@ button {
     justify-content: center;
     text-align: center;
     border-radius: 15px;
-    width: 230px;
+    width: 240px;
     height: 90px;
+    cursor: pointer;
 }
 
-.bookingForm button:hover {
-    background: var(--grey);
+
+/* Doing smooth transitions */
+.bookingLabel,
+.bookingButton {
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
 }
 
-/*For screens less than 1050px I want to have two elements/row instead of 3/4*/
+/* Lifts up a little bit on hover and adds a shadow*/
+.bookingLabel:hover,
+.bookingButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.bookingButton:hover {
+    background: rgb(36, 35, 35);
+}
+
+/* Returns back to original position, creating a pressed effect*/
+.bookingButton:active {
+    transform: translateY(0);
+}
+
+/* For screens less than 1050px I want to have two-two and then one-one-two */
 @media (max-width: 1050px)  {
-    .bookingForm {
-        display: grid;
-        grid-template-columns: repeat(2, 230px);
-        column-gap: 22px;
-        place-items: center;
+
+    /* I only want "animation" on the button */
+    .bookingLabel:hover,
+        .bookingLabel:focus-within {
+            transform: none;
+            box-shadow: none;
+        }
+
+    .bookingSearch {
+        padding: 10px 0;
     }
-}
-@media (max-width: 600px) {
-    .bookingForm {
-        display: grid;
-        grid-template-columns: repeat(1, 230px);
-        column-gap: 22px;
-        place-items: center;
-    }
-}
+
+        .bookingForm {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: stretch;
+            gap: 22px;
+            width: 100%;
+            padding: 0 16px;
+        }
+                .bookingForm .bookingLabel,
+                .bookingForm .bookingButton {
+                    flex-grow: 1;
+                    flex-shrink: 1;
+                    flex-basis: calc(50% - 11px);
+                    width: auto ;
+                    max-width: none;
+                }
+        
+                .bookingForm input,
+                .bookingForm select {
+                    width: 100%;
+                }
+} 
 
 /*=========================================
 Our vision on landing page
@@ -450,7 +486,7 @@ Sustainablility on landing page
     text-align: center;
     align-items: center;
     padding: 15px 10px 0 10px;
-    gap: 20px;
+    gap: 30px;
 }
 
 .s-card h3 {

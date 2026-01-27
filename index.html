@@ -46,38 +46,40 @@
     </div>
 </section>
 
-    <!-- Check in/ check out on page 1-->
-        <section class="bookingSearch">
-        <div class="wrapper">
-            <form class="bookingForm" action="booking.html" method="get">
+<!-- Check in/ check out on page 1 -->
+<section class="bookingSearch">
+    <div class="wrapper">
+        <form class="bookingForm" action="booking.html" method="get">
 
-    <!-- Started to work on this page 13/01-26 so you can't check in before -->
-                <article class="formItemFlex">
-                <label class="defaultFont" for="checkIn">Check In</label>
-                <input class="defaultFont" type="date" id="checkIn" 
-                name="checkIn" min="2026-01-13">
-                </article>
+<!-- Updated the work on this page 27/01-26 so you can't "check in" before -->
+            <label class="bookingLabel defaultFont" for="checkIn">
+                Check In:
+                <input type="date" class="bookingInput defaultFont" id="checkIn" name="checkIn" min="2026-01-27">
+            </label>
 
-    <!-- Started to work on this page 13/01-26 so you can't check out before 14/01-26 -->
-                <article class="formItemFlex">
-                <label class="defaultFont" for="checkOut">Check Out</label>
-                <input class="defaultFont" type="date" id="checkOut" 
-                name="checkOut" min="2026-01-14">
-                </article>
+<!-- Updated the work on this page 27/01-26 so you can't "check out" before 28/01-26 -->
+            <label class="bookingLabel defaultFont" for="checkOut">
+                Check Out:
+                <input type="date" class="bookingInput defaultFont" id="checkOut" name="checkOut" min="2026-01-28">
+            </label>
 
-                <article class="formItemFlex">
-                <select class="defaultFont">
-                    <option value="">Guests</option>
-                    <option value="1">1 Guests</option>
+            <label class="bookingLabel defaultFont" for="guests">
+                Guests:
+                <select class="bookingInput defaultFont" id="guests" name="guests">
+                    <option value="" disabled selected>select</option>
+                    <option value="1">1 Guest</option>
                     <option value="2">2 Guests</option>
                     <option value="3">3 Guests</option>
                     <option value="4">4 Guests</option>
-                </select> </article>
+                </select>
+            </label>
 
-                <button class="defaultFont" type="submit">Check Availability</button>
-            </form>
-        </div>
-    </section>
+            <button class="bookingButton defaultFont" type="submit">Check Availability</button>
+
+        </form>
+    </div>
+</section>
+
     <!-- Our vision on page one-->
     <section class="vision" id="vision">
         <div class="wrapper">
