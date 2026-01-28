@@ -12,7 +12,7 @@
   font-family: "Inter", var(--font-base);
 }
 
-/* "Search avalibility" detta är bara till så det ligger bakom */
+/* Used for accessibility, only seen by screen readers */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -69,7 +69,7 @@
 .nav-links a {
     text-decoration: none;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 24px;
     color: var(--black);
 }
 
@@ -85,7 +85,7 @@
 .nav-cta {
     text-decoration: none;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 24px;
     color: var(--white);
     background: var(--green);
     padding: 14px 22px;
@@ -149,7 +149,14 @@
     .nav-cta {
         display: none;
         grid-column: 2;
-    }
+    }    
+}
+
+/* ========== Make eerything have the selected type ========== */
+input,
+select,
+button {
+  font-family: "Inter", var(--font-base);
 }
 
 /* ========== HERO ========== */
@@ -162,12 +169,12 @@
   margin: 0;
   font-weight: 400;
   line-height: 1;
-  font-size: 96px;
+  font-size: 80px;
 }
 
 .booking-hero__inner p {
   margin: 14px 0 0;
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 400;
 }
 
@@ -195,8 +202,8 @@
 }
 
 .field-label {
-  font-weight: 700;
-  font-size: 20px;
+  font-weight: 600;
+  font-size: 24px;
 }
 
 .date-input,
@@ -206,6 +213,15 @@
   border: 1px solid rgba(0, 0, 0, 0.25);
   padding: 0 12px;
   background: var(--white);
+  font-weight: 600;
+}
+
+.select {
+  height: 65px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  padding: 0 12px;
+  background: var(--ligrey);
   font-weight: 600;
 }
 
@@ -224,7 +240,7 @@
 .form-error {
   grid-column: 1 / -1;
   margin: 0;  
-  font-size: 14px;
+  font-size: 24px;
   font-weight: 600;
   color: #b00020;
 }
@@ -237,12 +253,12 @@
 .results-header h2 {
   margin: 0;
   font-weight: 400;
-  font-size: 56px;
+  font-size: 48px;
 }
 
 .results-header p {
   margin: 8px 0 18px;
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 400;
 }
 
@@ -311,14 +327,15 @@
 
 .room-head h3 {
   margin: 0;
-  font-size: 22px;
-  font-weight: 700;
+  font-size: 32px;
+  font-weight: 400;
 }
 
 .room-sub {
   margin: 6px 0 0;
-  font-size: 14px;
-  color: rgba(0, 0, 0, 0.65);
+  font-size: 20px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
   display: flex;
   align-items: center;
   gap: 8px;
@@ -334,16 +351,16 @@
 .room-price {
   margin: 0;
   color: var(--green);
-  font-weight: 800;
+  font-weight: 400;
   text-align: right;
-  font-size: 20px;
+  font-size: 32px;
 }
 
 .room-price span {
   display: block;
-  font-size: 12px;
-  font-weight: 600;
-  color: rgba(0, 0, 0, 0.55);
+  font-size: 20px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
 }
 
 .room-block {
@@ -357,8 +374,8 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 13px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 400;
   color: rgba(0, 0, 0, 0.7);
 }
 
@@ -370,8 +387,9 @@
 
 .room-text {
   margin: 0;
-  font-size: 14px;
-  color: rgba(0, 0, 0, 0.75);
+  font-size: 20px;
+  color: rgba(0, 0, 0, 1);
+  font-weight: 400;
 }
 
 .tags {
@@ -387,7 +405,7 @@
   background: #efefef;
   border-radius: 8px;
   padding: 6px 10px;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
   color: rgba(0, 0, 0, 0.75);
 }
