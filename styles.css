@@ -15,8 +15,20 @@
     --ligrey: #ECECF0;
     --purple: #9810FA;
     --cugrey: #F9FAFB;
+    --icon: #88DC84;
 
-    --font-base: "Inter";
+    /* Fonts */
+    --font-base: "Inter", 
+                "Montserrat", 
+                Arial, 
+                sans-serif;
+
+    --font-special: "Montserrat", 
+                    "Inter",
+                     Arial, 
+                    sans-serif;
+
+    /* Font sizes */
     --text-body: 20px;
     --text-form: 24px;
     --text-h1: 80px;
