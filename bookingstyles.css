@@ -1,7 +1,5 @@
-/* Every var(--text) comes from the main styles.css */
+/* ===== My bookingstyles.css =====*/
 
-
-/* bookingstyles.css */
 /* i had to import the font from google to make the font work */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
 
@@ -33,6 +31,7 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 }
 
+/* Main navigation layout (grid-based) */
 .nav {
     display: grid;
     grid-template-columns: auto 1fr auto auto;
@@ -42,17 +41,20 @@
     width: 100%;
 }
 
+/* Centers nav content and controls header height */
 .nav.wrapper {
     margin: 0 auto;
     height: 147px;
 }
 
+/* Logo image sizing */
 .nav-logo img {
     height: 54px;
     width: auto;
     display: block;
 }
 
+/* Navigation link list */
 .nav-links {
     list-style: none;
     display: flex;
@@ -63,6 +65,7 @@
     text-align: center;
 }
 
+/* Base styles for navigation links */
 .nav-links a {
     text-decoration: none;
     font-weight: 600;
@@ -70,15 +73,18 @@
     color: var(--black);
 }
 
+/* Hover state for navigation links */
 .nav-links a:hover {
     color: var(--green);
 }
 
+/* Active/current page link */
 .nav-links a.active {
     color: var(--green);
     font-weight: 700;
 }
 
+/* Call-to-action button in nav */
 .nav-cta {
     text-decoration: none;
     font-weight: 600;
@@ -100,6 +106,7 @@
     background-color: var(--white);
 }
 
+/* THis makes the hamburger icon bars */
 .hamburger span {
     width: 30px;
     height: 3px;
@@ -149,19 +156,20 @@
      }
     }    
 
-/* ========== Make eerything have the selected type ========== */
+/* ===== MAKE EVERYTHING HAVE THE SELECTED TYPE ===== */
 input,
 select,
 button {
   font-family: "Inter", var(--font-base);
 }
 
-/* ========== HERO ========== */
+/* Booking page hero section */
 .booking-hero {
   padding: 46px 0 18px;
   text-align: center;
 }
 
+/* Hero headline styling */
 .booking-hero__inner h1 {
   margin: 0;
   font-weight: 400;
@@ -169,17 +177,20 @@ button {
   font-size: 80px;
 }
 
+/* Hero subheading styling */
 .booking-hero__inner p {
   margin: 14px 0 0;
   font-size: 36px;
   font-weight: 400;
 }
 
-/* ========== SEARCH CARDET ========== */
+/* ====== SEARCH CARD ===== */
+/* Wrapper for booking search section */
 .booking-search {
   padding: 10px 0 28px;
 }
 
+/* Booking form layout and card styling */
 .booking-form {
   background: var(--white);
   border-radius: 14px;
@@ -192,17 +203,20 @@ button {
   align-items: end;
 }
 
+/* Individual form field wrapper */
 .field {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
+/* Label text above inputs */
 .field-label {
   font-weight: 600;
   font-size: 24px;
 }
 
+/* Date input field styling and select dropdown styling*/
 .date-input,
 .select {
   height: 65px;
@@ -210,20 +224,13 @@ button {
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.25);
   padding: 0 12px;
-  background: var(--white);
   font-weight: 600;
 }
 
-.select {
-  height: 65px;
-  border-radius: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.25);
-  padding: 0 12px;
-  background: var(--ligrey);
-  font-weight: 600;
-}
+.date-input { background: var(--white); }
+.select { background: var(--ligrey); }
 
-/* booking button*/
+/* Booking submit button */
 .btn-book {
   height: 65px;
   border: none;
@@ -243,25 +250,29 @@ button {
   color: #b00020;
 }
 
-/* ========== RESULTS ========== */
+/* ===== RESULTS ===== */
+/* Wrapper for search results section */
 .booking-results {
   padding: 18px 0 44px;
 }
 
+/* Results section headline */
 .results-header h2 {
   margin: 0;
   font-weight: 400;
   font-size: 48px;
 }
 
+/* Results section subtext */
 .results-header p {
   margin: 8px 0 18px;
   font-size: 32px;
   font-weight: 400;
 }
 
-/* ========== ROOM CARDS ========== */
+/* ===== ROOM CARDS ===== */
 
+/* Base room card layout */
 .room-card {
   background: var(--white);
   border-radius: 14px;
@@ -273,19 +284,19 @@ button {
   margin-bottom: 18px;
 }
 
-.room-card--reverse {
-  grid-template-columns: 7fr 5fr;
-}
-
+/* reverse: change order on room cards */
+.room-card--reverse { grid-template-columns: 7fr 5fr; }
 .room-card--reverse .room-media { order: 2; }
 .room-card--reverse .room-info  { order: 1; }
 
+/* Media/image container inside room card */
 .room-media {
   position: relative;
   margin: 0;
   min-height: 220px;
 }
 
+/* Room image styling */
 .room-media img {
   width: 100%;
   height: 100%;
@@ -293,6 +304,7 @@ button {
   display: block;  
 }
 
+/* Rating badge on image */
 .room-rating {
   position: absolute;
   top: 12px;
@@ -307,12 +319,14 @@ button {
   align-items: center;
 }
 
+/* Star icon inside rating badge */
 .room-rating .star {
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
+/* Text/content area of room card */
 .room-info {
   padding: 18px;
   display: flex;
@@ -320,6 +334,7 @@ button {
   gap: 12px;
 }
 
+/* Top section of room info (title + price) */
 .room-head {
   display: flex;
   justify-content: space-between;
@@ -327,12 +342,14 @@ button {
   align-items: flex-start;
 }
 
+/* Room title */
 .room-head h3 {
   margin: 0;
   font-size: 32px;
   font-weight: 400;
 }
 
+/* Room meta info (guests, size) */
 .room-sub {
   margin: 6px 0 0;
   font-size: 20px;
@@ -343,6 +360,7 @@ button {
   gap: 8px;
 }
 
+/* Inline icons used in text */
 .inline-icon {
   width: 24px;
   height: 24px;
@@ -350,6 +368,7 @@ button {
   vertical-align: middle;
 }
 
+/* Room price styling */
 .room-price {
   margin: 0;
   color: var(--green);
@@ -358,6 +377,7 @@ button {
   font-size: 32px;
 }
 
+/* Pernight price label */
 .room-price span {
   display: block;
   font-size: 20px;
@@ -365,12 +385,14 @@ button {
   color: rgba(0, 0, 0, 1);
 }
 
+/* Grouped info blocks (features, AI, etc.) */
 .room-block {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
+/* Title for each info block */
 .block-title {
   margin: 0;
   display: flex;
@@ -381,12 +403,14 @@ button {
   color: rgba(0, 0, 0, 0.7);
 }
 
+/* Icon used in block titles */
 .block-icon {
   width: 20px;
   height: 20px;
   object-fit: contain;
 }
 
+/* Plain text content inside blocks */
 .room-text {
   margin: 0;
   font-size: 20px;
@@ -394,6 +418,7 @@ button {
   font-weight: 400;
 }
 
+/* List of feature tags */
 .tags {
   list-style: none;
   padding: 0;
@@ -403,6 +428,7 @@ button {
   gap: 8px;
 }
 
+/* Individual tag pill */
 .tag {
   background: #efefef;
   border-radius: 8px;
@@ -412,11 +438,13 @@ button {
   color: rgba(0, 0, 0, 0.75);
 }
 
+/* AI-specific tag styling */
 .tags-ai .tag {
   background: rgba(152, 16, 250, 0.10);
   color: #6d28d9;
 }
 
+/* Disabled reserve button */
 .btn-reserve {
   margin-top: auto;
   width: 100%;
@@ -553,7 +581,7 @@ h4 {
     }
 }
 
-/* ========== RESPONSIVE ========== */
+/* ===== RESPONSIVE ===== */
 
 @media (max-width: 1000px) {
   .booking-form {
