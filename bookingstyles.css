@@ -29,11 +29,8 @@
        Header for all pages
 ===========================================*/
 .site-header {
-  height: 147px;
-  background: var(--white);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-  display: flex;
-  align-items: center; /* vertikal centrering */
+    background: var(--white);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 }
 
 .nav {
@@ -47,7 +44,7 @@
 
 .nav.wrapper {
     margin: 0 auto;
-    height: auto;
+    height: 147px;
 }
 
 .nav-logo img {
@@ -69,7 +66,7 @@
 .nav-links a {
     text-decoration: none;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 18px;
     color: var(--black);
 }
 
@@ -85,7 +82,7 @@
 .nav-cta {
     text-decoration: none;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 18px;
     color: var(--white);
     background: var(--green);
     padding: 14px 22px;
