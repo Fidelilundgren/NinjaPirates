@@ -63,7 +63,7 @@
     white-space: nowrap;
     justify-self: center;
 }
-/*Started here//F*/
+/* Only did the hamburger //F */
 .hamburger {
     display: none;
     border: 0;
@@ -124,8 +124,9 @@
 /*=========================================
 Hero section on landing page
 ===========================================*/
+
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.45), 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), 
     rgba(0, 0, 0, 0.45)),
     url("assets/assets/photos/hero.jpg");
     background-size: cover;
@@ -137,53 +138,56 @@ Hero section on landing page
     place-items: center;
 }
 
+/* Using it as background so need to hide the img*/
+.hero-img {
+    display: none;
+}
+
 .heroContent {
     display: grid;
     grid-template-columns: 1fr;
     gap: 40px;
     margin: 0 auto;
     text-align: center;
-    color: var(--white);
 }
 
 .heroContent h1, .heroContent p{
     margin: 0;
     font-weight: 400;
     padding: 0 25px 0 25px;
+    color: var(--white);
 }
 
 .heroButtons {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 10px;
     flex-wrap: wrap;
 }
 
-.heroButtons a {
+.butn-left, .butn-right {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    text-decoration: none;
     color: var(--white);
-    font-weight: 600;
     border-radius: 10px;
-    padding: 16px 32px 16px 32px;
-    width: 209px;
+    padding: 16px 32px;
+    width: 240px;
     height: 73px;
 }
 
-.heroBook {
+.butn-left {
     background: linear-gradient(to left, var(--gblue), var(--green));
     border: 0;
 }
 
-.heroLearn  {
+.butn-right  {
     background: transparent;
-    border: 1px solid var(--white);
+    border: 2px solid var(--white);
 }
 
+/* For screens less than 600 pictures i want column and smaller size on h1*/
 @media (max-width: 600px) {
     .heroButtons {
         flex-direction: column;
@@ -255,7 +259,6 @@ Hero section on landing page
     height: 90px;
     cursor: pointer;
 }
-
 
 /* Doing smooth transitions */
 .bookingLabel,
@@ -586,8 +589,8 @@ Sustainablility on landing page
 .stay-title, 
 .aiText, 
 .aiList, 
-.aiList p, 
-.aiList h3, 
+ .aiList p, 
+.aiList h3,
 .ai-img {
     margin: 0;
 }
@@ -613,6 +616,8 @@ Sustainablility on landing page
 .stay-content {
     display: grid;
     gap: 12px;
+    justify-content: center;
+    text-align: left;
 } 
 
 .stay-title {
@@ -649,6 +654,10 @@ Sustainablility on landing page
     color: var(--white);
     border: 0;
     cursor: pointer;
+}
+
+.ai-img {
+    place-items: center;
 }
 
 .ai-img img {
