@@ -16,6 +16,7 @@
     --purple: #9810FA;
     --cugrey: #F9FAFB;
     --icon: #88DC84;
+    --hover: #00ad74;
 
     /* Fonts */
     --font-base: "Inter", 
@@ -41,6 +42,7 @@
     box-sizing: border-box;
 }
 
+/* Just a start, some basic */
 body {
     margin: 0;
     font-family: var(--font-base);
@@ -53,13 +55,15 @@ h2 { font-size: var(--text-h2); }
 
 h3 { font-size: var(--text-h3); }
 
-button, form { 
+button, 
+form { 
     font-family: var(--font-base); 
     font-size: var(--text-form); 
 }
 
 footer { font-size: var(--text-f);}
 
+/* Layout container */
 .wrapper {
     max-width: 1240px;
     margin: 0 auto;
