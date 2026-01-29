@@ -79,7 +79,7 @@
 }
 
 /*=========================================
- Default fonts
+            Default fonts
 ===========================================*/
 
 .defaultFont {
@@ -101,7 +101,7 @@
 }
 
 /*=========================================
- Hero section on landing page
+        Hero section on landing page
 ===========================================*/
 
 .hero {
@@ -117,7 +117,7 @@
     place-items: center;
 }
 
-/* Using it as background so need to hide the img*/
+/* Using it as background so need to hide the img */
 .hero-img {
     display: none;
 }
@@ -138,6 +138,7 @@
     color: var(--white);
 }
 
+/* Button row */
 .heroButtons {
     display: flex;
     justify-content: center;
@@ -146,6 +147,7 @@
     flex-wrap: wrap;
 }
 
+/* Shared button base */
 .butn-left, 
 .butn-right {
     display: inline-flex;
@@ -170,10 +172,10 @@
 }
 
 /*=========================================
- Check in/check out on landing page
+    Check in/check out on landing page
 ===========================================*/
 
-/*Background with ombre*/
+/* Background with ombre */
 .bookingSearch {
     background: linear-gradient(to left, var(--gblue), var(--green));
     padding: 40px 0 40px 0;
@@ -187,6 +189,7 @@
     width: 100%;
 }
 
+/* Labels are styled as cards so the whole label is clickable*/
 .bookingLabel {
     display: flex;
     flex-direction: column;
@@ -225,9 +228,10 @@
 }
 
 /*=========================================
-Our vision on landing page
+        Our vision on landing page
 ===========================================*/
 
+/* Remove default margins */
 .card h3,
 .v-cards-p,
 .s-card h3,
@@ -236,6 +240,7 @@ Our vision on landing page
     margin: 0;
 }
 
+/* Trying to not be dry */
 .vision h2, 
 .vision-p,
 .card h3,
@@ -253,10 +258,11 @@ Our vision on landing page
     margin: 0 0 30px 0;
 }
 
+/* The only text as Montserrat */
 .vision-p {
     font-family: var(--font-special);
     max-width: 65ch;
-    margin: 0 auto 48px auto;
+    margin: 0 auto 30px auto;
     font-weight: 400;
     line-height: 1.2;
     padding: 0 5px 0 5px;
@@ -284,15 +290,13 @@ Our vision on landing page
 }
 
 .v-cards-p {
-    font-size: var(--text-body);
     max-width: 25ch;
 }
 
 /*=========================================
-Sustainablility on landing page (our vision)
+Sustainablility on landing page + our vision
 ===========================================*/
 
-.s-cards-text,
 .sustain h2,
 .sustain-p,
 .s-card h4,
@@ -307,11 +311,11 @@ Sustainablility on landing page (our vision)
 }
 
 .sustain h2 {
-    margin: 0 0 30px 0;
+    margin: 0 0 20px 0;
 }
 
 .sustain-p {
-    margin: 0 auto 30px auto;
+    margin: 0 auto 20px auto;
     font-size: var(--text-form);
 }
 
@@ -337,20 +341,16 @@ Sustainablility on landing page (our vision)
     gap: 30px;
 }
 
+/* Highlighting with green */
 .s-card h3 {
     color: var(--green);
-    margin: 0;
 }
 
 .s-card h4 {
     font-size: 25px; /*28 was too big*/
 }
 
-.s-cards-text {
-    font-size: var(--text-body);
-}
-
-/* It's the same for vision and sustain*/
+/* It's the same for vision and sustain */
 .s-icon,
 .icon {
     display: flex;
@@ -369,14 +369,13 @@ Sustainablility on landing page (our vision)
 }
 
 /*=========================================
- Your AI-Enhanced Stay on landing page
+    Your AI-Enhanced Stay on landing page
 ===========================================*/
-
 
 .stay-title, 
 .aiText, 
 .aiList, 
- .aiList p, 
+.aiList p, 
 .aiList h3,
 .ai-img {
     margin: 0;
@@ -393,6 +392,7 @@ Sustainablility on landing page (our vision)
     padding: 60px 10px 50px;
 }
 
+/* Two column on desktop, text + img */
 .aiStay .wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -409,9 +409,7 @@ Sustainablility on landing page (our vision)
 
 .stay-title {
     font-size: 38px; /*figma was 48 - too big*/
-    font-family: var(--font-base);
     font-weight: 400;
-    /* border-top: 1px solid var(--grey); this is for myself to see that its the same height */
 }
 
 .aiText {
@@ -419,6 +417,7 @@ Sustainablility on landing page (our vision)
     line-height: 1.4;
 }
 
+/* Spacing controlled by grid gap */
 .aiList {
     display: grid;
     list-style: none;
@@ -457,7 +456,7 @@ Sustainablility on landing page (our vision)
 }
 
 /*=========================================
- Ready to Transform on landing page
+    Ready to Transform on landing page
 ===========================================*/
 
 .readyToTransform {
@@ -487,7 +486,7 @@ Sustainablility on landing page (our vision)
     padding: 0 20px;
 }
 
-/* Smaller spacing between the two lines */
+/* Tighter spacing between the two lines */
 .ready-text+.ready-text {
     margin-top: -10px;
 }
@@ -505,15 +504,23 @@ Sustainablility on landing page (our vision)
     cursor: pointer;
 }
 /*=========================================
- Animations
+            Animations
 ===========================================*/
 
 /* ============== Hero ============== */
 
-/* Small animation on the button to have a click effect, felt weird to have a hover color */
+/* Small animation on the buttons to have a click effect */
 .butn-left:active,
 .butn-right:active {
     transform: translateY(1px);
+}
+
+.heroButtons .butn-left:hover {
+    background: var(--hover);
+}
+
+.butn-right:hover {
+    background-color: #00ad738c;
 }
 
 /* ============== Check in check out ============== */
@@ -534,20 +541,20 @@ Sustainablility on landing page (our vision)
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
-.bookingButton:hover {
-    background: rgb(36, 35, 35);
-}
-
 /* Returns back to original position, creating a pressed effect*/
 .bookingButton:active {
     transform: translateY(0);
 }
 
+.bookingButton:hover {
+    background: rgb(36, 35, 35);
+}
+
 /* ============== Your ai-enhanced stay ============== */
 
-/* Small "animation" on the button to have a click effect */
+/* Small animation on the button to have a click effect */
 .aiButn:hover {
-    background-color: #00ad74;
+    background-color: var(--hover);
 }
 
 .aiButn:active {
@@ -556,7 +563,7 @@ Sustainablility on landing page (our vision)
 
 /* ============== Ready to transform ============== */
 
-/* Small "animation" on the button to have a click effect */
+/* Small animation on the button to have a click effect */
 .readyToTransform .ready:hover {
     background-color: rgba(255, 255, 255, 0.85);
 }
@@ -566,11 +573,10 @@ Sustainablility on landing page (our vision)
 }
 
 /*=========================================
- @media querys
+            @media querys
 ===========================================*/
 
 /* =========== Header =========== */
-/*For screens less than 800px*/
 @media (max-width: 800px) {
     .nav.wrapper {
         height: auto;
@@ -599,6 +605,7 @@ Sustainablility on landing page (our vision)
         width: fit-content;
     }
 
+    /* Nav links hidden on mobile, shows with JS */
     .nav-links {
         grid-column: 2;
         display: none;
@@ -613,7 +620,7 @@ Sustainablility on landing page (our vision)
 }
 
 /* =========== Hero section =========== */
-/* For screens less than 600 pictures i want column and smaller size on h1*/
+/* Smaller text and stacked buttons */
 @media (max-width: 600px) {
     .heroButtons {
         flex-direction: column;
@@ -626,7 +633,7 @@ Sustainablility on landing page (our vision)
 }
 
 /* =========== Check in check out section =========== */
-/* For screens less than 1050px I want to have two-two and then one-one-two */
+/* Need to have two-two and then one-one-two */
 @media (max-width: 1050px) {
     /* I only want "animation" on the button */
     .bookingLabel:hover,
@@ -639,6 +646,7 @@ Sustainablility on landing page (our vision)
         padding: 10px 0;
     }
 
+    /* Using flex so items can wrap */
     .bookingForm {
         display: flex;
         flex-wrap: wrap;
@@ -648,6 +656,7 @@ Sustainablility on landing page (our vision)
         padding: 0 16px;
     }
 
+    /* Two items per row */
     .bookingForm .bookingLabel,
     .bookingForm .bookingButton {
         flex-grow: 1;
@@ -664,6 +673,7 @@ Sustainablility on landing page (our vision)
 }
 
 /* =========== Our vision =========== */
+/* Two cards per row */
 @media (max-width: 1155px) {
     .cards-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -695,6 +705,7 @@ Sustainablility on landing page (our vision)
     }
 }
 
+/* One card per row */
 @media (max-width: 600px) {
     .cards-grid {
         grid-template-columns: 1fr;
@@ -706,6 +717,7 @@ Sustainablility on landing page (our vision)
 }
 
 /* =========== Sustainablility by the numbers =========== */
+/* Two cards per row */
 @media (max-width: 1155px) {
     .sustain {
         padding: 40px 0 30px 0;
@@ -729,6 +741,7 @@ Sustainablility on landing page (our vision)
         margin: 0;
     }
 
+    /* Fixing spacing for smaller cards */
     .s-icon {
         margin-bottom: 10px;
     }
@@ -751,6 +764,7 @@ Sustainablility on landing page (our vision)
     }
 }
 
+/* One card per row */
 @media (max-width: 600px) {
     .s-cards-grid {
         grid-template-columns: 1fr;
@@ -762,7 +776,7 @@ Sustainablility on landing page (our vision)
 }
 
 /* =========== Your ai-enhanced stay =========== */
-/* For sceens less than 900px you have the picture as a background */
+/* Using the picture as a background */
 @media (max-width: 900px) {
     .aiStay {
         padding: 60px 16px;
@@ -819,7 +833,7 @@ Sustainablility on landing page (our vision)
 }
 
 /* =========== Ready to transform =========== */
-/* PO wanted fonts it smaller*/
+/* Smaller text */
 @media (max-width: 1040px) {
     .readyToTransform h2 {
         font-size: var(--text-h3);
@@ -839,7 +853,7 @@ Sustainablility on landing page (our vision)
 /*=========================================
  Accessibility reduced motion
 ===========================================*/
-
+/* Reduced motion for users that don't want animation */
 @media (prefers-reduced-motion: reduce) {
     * {
         animation: none !important;

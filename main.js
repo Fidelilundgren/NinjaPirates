@@ -54,7 +54,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     if (output) {
         output.innerHTML = `<strong>Thank you ${fn}!</strong><br>We have received your email (${em}) and will call you on ${ph}.`;
         output.style.color = "#009966";
-        // console.log("Data utskriven", {fn, em, ph});
+        
     }
          this.reset();  // Rensar värdet i kontakta oss
 });
