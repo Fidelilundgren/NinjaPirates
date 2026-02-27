@@ -134,22 +134,22 @@ padding-right:25%; */
 
     .amenities-slider ul {
     display: flex;
-    flex-direction: row; /* Ligger på rad som standard */
+    flex-direction: row;
     list-style: none;
     background: var(--ligrey);
     border-radius: 50px;
     
-    /* ÄNDRING: Responsiv bredd */
+   
     width: 90%; 
     max-width: 700px; 
-    height: auto; /* ÄNDRING: Låt höjden anpassas när de staplas */
+    height: auto; 
     min-height: 65px;
     
     align-items: center;
-    margin: 0 auto 3rem auto; /* Centrerad */
+    margin: 0 auto 3rem auto;
     justify-content: space-between;
     text-align: center;
-    padding: 10px 30px; /* Justerad padding för att rymma staplade element */
+    padding: 10px 30px; 
     font-weight: 600;
     line-height: 1;
 }
